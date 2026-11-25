@@ -1,0 +1,31 @@
+{
+  "status": "complete_pending_review",
+  "evaluation_split": "TRAIN only",
+  "question_scope": "all_train",
+  "seed": null,
+  "question_count": 1,
+  "question_ids": [
+    "TRAIN_Q000"
+  ],
+  "chunk_config": "fixed_1200_0",
+  "chunk_size": 1200,
+  "chunk_overlap": 0,
+  "context_mode": "representative_only",
+  "ranking_file": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/hybrid/results/pplx_bm25_rrf_grid_train/fixed_1200_0/k1_1.6_b_0.5/bm25_d100_pplx_d100_pplxw3_bm25w1_k60/rrf_rankings.jsonl",
+  "chunk_metadata": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_1200_0/chunk_metadata.jsonl",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "temperature": 0,
+  "max_tokens": 512,
+  "total_context_token_limit": 32768,
+  "input_token_limit": 32256,
+  "input_limit_preflight": "UTF-8 bytes <= input token limit (conservative)",
+  "hard_request_timeout_seconds": 300.0,
+  "api_retry_limit": null,
+  "prompt_template": "configs/generation/answer_with_citations_direct_conditions.prompt",
+  "prompt_sha256": "9bbf9e491551b8e770440a1e02e97e3de1a4c7254b753216c1aa627faa674cf3",
+  "completed": 1,
+  "exact_api_prompt_tokens_available": 1,
+  "max_exact_api_prompt_tokens": 2156,
+  "generations": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/generation/results/siliconflow_train_q000_three_chain_top5_smoke/A_fixed_1200_0_rrf_original/generations.jsonl",
+  "contexts": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/generation/results/siliconflow_train_q000_three_chain_top5_smoke/A_fixed_1200_0_rrf_original/contexts.jsonl"
+}

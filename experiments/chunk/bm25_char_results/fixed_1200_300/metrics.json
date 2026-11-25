@@ -1,0 +1,44 @@
+{
+  "artifacts": {
+    "index": "data/processed/techqa/bm25_chunk_indexes/fixed_1200_300.sqlite",
+    "rankings": "experiments/chunk/bm25_char_results/fixed_1200_300/query_rankings.jsonl"
+  },
+  "bm25": {
+    "b": 0.75,
+    "document_aggregation": "highest-scoring chunk per document",
+    "idf_and_average_length": "recomputed in this configuration's independent index",
+    "implementation": "Python sqlite3 / SQLite FTS5 bm25()",
+    "index_text": "document title + chunk body",
+    "k1": 1.2,
+    "reranking": false,
+    "tie_break": "document_id ascending",
+    "tokenization": "Unicode alphanumeric runs matched by Python regex [^\\W_]+, casefolded; underscores and all other punctuation are separators; no stemming; no stopword filtering; duplicate query terms removed before OR matching"
+  },
+  "config": {
+    "name": "fixed_1200_300",
+    "overlap": 300,
+    "size": 1200,
+    "strategy": "fixed"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "sqlite": "3.45.1"
+  },
+  "index": {
+    "chunk_body_length_p50": 1200,
+    "chunk_body_length_p95": 1200,
+    "chunk_count": 117259,
+    "document_count": 28482,
+    "index_build_seconds": 8.639615904998209,
+    "index_size_bytes": 210677760
+  },
+  "retrieval": {
+    "average_query_seconds": 0.2945656654867263,
+    "invalid_returned_document_ids": 0,
+    "mrr_at_10": 0.5018756613756614,
+    "queries_with_10_documents": 450,
+    "query_count": 450,
+    "recall_at_1": 0.43777777777777777,
+    "recall_at_5": 0.5822222222222222
+  }
+}

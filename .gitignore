@@ -1,0 +1,170 @@
+# -----------------------------------------------------------------------------
+# Python environments, caches, tests, and build outputs
+# -----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# -----------------------------------------------------------------------------
+# Secrets and machine-local configuration
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.keystore
+secrets/
+credentials/
+
+# Local agent/cloud configuration must never be published.
+.agents/
+.aws/
+.codex/
+
+# -----------------------------------------------------------------------------
+# Editors and operating-system files
+# -----------------------------------------------------------------------------
+.idea/
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp
+*.swo
+
+# -----------------------------------------------------------------------------
+# TechQA data
+# -----------------------------------------------------------------------------
+# Raw, downloaded, external, and intermediate corpora are large and may have
+# redistribution restrictions. Recreate derived files with scripts instead.
+data/raw/
+data/external/
+data/interim/
+
+# Ignore all derived data except the small reproducibility manifest referenced
+# by README.md.
+data/processed/*
+!data/processed/techqa/
+data/processed/techqa/*
+!data/processed/techqa/summary.json
+
+# Optional location for publishable, hand-curated data manifests.
+data/manifests/*.local.*
+
+# -----------------------------------------------------------------------------
+# Models, checkpoints, embeddings, and search indexes
+# -----------------------------------------------------------------------------
+models/
+model_cache/
+checkpoints/
+indexes/
+embeddings/
+cache/
+.cache/
+huggingface/
+
+*.bin
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.tflite
+
+*.npy
+*.npz
+*.memmap
+*.faiss
+*.index
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.db
+
+# -----------------------------------------------------------------------------
+# Experiment artifacts
+# -----------------------------------------------------------------------------
+# Keep experiment source code plus compact JSON/CSV/Markdown summaries. Ignore
+# full rankings, prompts, contexts, answers, reviews, per-question checkpoints,
+# service logs, and process state.
+experiments/**/*.jsonl
+# Keep the small final DEV verdict file referenced by README.md. It contains
+# only question IDs, verdicts, and one-line reasons—not prompts or corpus text.
+!experiments/generation/results/siliconflow_dev_pplx_top5_neighbors_prompt_v2_147/dev_review.jsonl
+experiments/**/*.json
+!experiments/**/summary.json
+!experiments/**/metrics.json
+!experiments/**/manifest.json
+!experiments/**/codex_review_summary.json
+
+experiments/**/checkpoints/
+experiments/**/runs/
+experiments/**/artifacts/
+experiments/**/cache/
+experiments/**/logs/
+experiments/**/*.txt
+experiments/**/*.pid
+experiments/**/*.exit_code
+
+# External experiment trackers.
+wandb/
+mlruns/
+lightning_logs/
+
+# -----------------------------------------------------------------------------
+# Logs, temporary files, crash dumps, and downloaded archives
+# -----------------------------------------------------------------------------
+*.log
+*.log.*
+*.out
+*.err
+*.pid
+*.tmp
+*.temp
+tmp/
+temp/
+
+core
+core.*
+*.core
+*.dmp
+
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bz2
+*.7z
+*.rar
+
+# Local downloads and partial transfers.
+downloads/
+*.part
+*.partial
+*.incomplete

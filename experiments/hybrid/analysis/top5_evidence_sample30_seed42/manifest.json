@@ -1,0 +1,53 @@
+{
+  "status": "assembled",
+  "sample_source": "experiments/dense/results/qwen3_reranker_4b_bf16_top50_seven_chain_sample30_seed42_validation/sample_question_ids.json",
+  "sample_size": 30,
+  "seed": 42,
+  "chain_count": 7,
+  "judgment_count": 210,
+  "inputs": "inputs.jsonl",
+  "chains": [
+    {
+      "name": "fixed_1200_0_rrf",
+      "chunk_config": "fixed_1200_0",
+      "source": "rrf",
+      "rankings": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/hybrid/results/pplx_bm25_rrf_grid_train/fixed_1200_0/k1_1.6_b_0.5/bm25_d100_pplx_d100_pplxw3_bm25w1_k60/rrf_rankings.jsonl"
+    },
+    {
+      "name": "fixed_1200_300_rrf",
+      "chunk_config": "fixed_1200_300",
+      "source": "rrf",
+      "rankings": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/hybrid/results/pplx_bm25_rrf_grid_train/fixed_1200_300/k1_1.2_b_1/bm25_d100_pplx_d100_pplxw3_bm25w1_k60/rrf_rankings.jsonl"
+    },
+    {
+      "name": "fixed_600_0_rrf",
+      "chunk_config": "fixed_600_0",
+      "source": "rrf",
+      "rankings": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/hybrid/results/pplx_bm25_rrf_grid_train/fixed_600_0/k1_1.6_b_1/bm25_d50_pplx_d100_pplxw3_bm25w1_k60/rrf_rankings.jsonl"
+    },
+    {
+      "name": "fixed_600_150_rrf",
+      "chunk_config": "fixed_600_150",
+      "source": "rrf",
+      "rankings": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/hybrid/results/pplx_bm25_rrf_grid_train/fixed_600_150/k1_1.6_b_1/bm25_d100_pplx_d100_pplxw3_bm25w1_k60/rrf_rankings.jsonl"
+    },
+    {
+      "name": "paragraph_merge_1200_0_rrf",
+      "chunk_config": "paragraph_merge_1200_0",
+      "source": "rrf",
+      "rankings": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/hybrid/results/pplx_bm25_rrf_grid_train/paragraph_merge_1200_0/k1_1.6_b_1/bm25_d50_pplx_d100_pplxw2_bm25w1_k60/rrf_rankings.jsonl"
+    },
+    {
+      "name": "paragraph_merge_600_0_rrf",
+      "chunk_config": "paragraph_merge_600_0",
+      "source": "rrf",
+      "rankings": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/hybrid/results/pplx_bm25_rrf_grid_train/paragraph_merge_600_0/k1_1.2_b_0.5/bm25_d100_pplx_d100_pplxw3_bm25w1_k60/rrf_rankings.jsonl"
+    },
+    {
+      "name": "fixed_600_0_pplx",
+      "chunk_config": "fixed_600_0",
+      "source": "pplx",
+      "rankings": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_600_0/dense_rankings_top100.jsonl"
+    }
+  ]
+}

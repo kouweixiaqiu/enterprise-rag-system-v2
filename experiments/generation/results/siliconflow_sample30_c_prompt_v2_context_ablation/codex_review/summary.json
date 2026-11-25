@@ -1,0 +1,18 @@
+{
+  "reviewer": "Codex",
+  "question_count": 30,
+  "old_representative_only_complete_pass": 15,
+  "new_representative_with_neighbors_complete_pass": 19,
+  "new_pass": [
+    "TRAIN_Q144",
+    "TRAIN_Q462",
+    "TRAIN_Q375",
+    "TRAIN_Q415",
+    "TRAIN_Q127"
+  ],
+  "regression": [
+    "TRAIN_Q154"
+  ],
+  "net_change": 4,
+  "reviews_file": "/home/fuxuanyi/AI_projects/enterprise-rag-system-v2/experiments/generation/results/siliconflow_sample30_c_prompt_v2_context_ablation/codex_review/reviews.jsonl"
+}

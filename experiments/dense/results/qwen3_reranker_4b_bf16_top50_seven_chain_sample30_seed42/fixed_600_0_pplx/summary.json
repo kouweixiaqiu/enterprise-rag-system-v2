@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "chain": "fixed_600_0_pplx",
+  "chunk_config": "fixed_600_0",
+  "ranking_source": "pplx",
+  "source_configuration": "PPLX original ranking",
+  "source_rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_600_0/dense_rankings_top100.jsonl",
+  "query_count": 30,
+  "candidate_documents_per_query": 50,
+  "metrics_before": {
+    "query_count": 30,
+    "hits_at_1": 17,
+    "recall_at_1": 0.5666666666666667,
+    "hits_at_5": 27,
+    "recall_at_5": 0.9,
+    "hits_at_10": 27,
+    "recall_at_10": 0.9,
+    "hits_at_20": 28,
+    "recall_at_20": 0.9333333333333333
+  },
+  "metrics_after": {
+    "query_count": 30,
+    "hits_at_1": 14,
+    "recall_at_1": 0.4666666666666667,
+    "hits_at_5": 23,
+    "recall_at_5": 0.7666666666666667,
+    "hits_at_10": 26,
+    "recall_at_10": 0.8666666666666667,
+    "hits_at_20": 27,
+    "recall_at_20": 0.9
+  },
+  "top_5_change": {
+    "new_hits": 1,
+    "dropped_hits": 5,
+    "net_change": -4,
+    "new_question_ids": [
+      "TRAIN_Q017"
+    ],
+    "dropped_question_ids": [
+      "TRAIN_Q089",
+      "TRAIN_Q511",
+      "TRAIN_Q054",
+      "TRAIN_Q294",
+      "TRAIN_Q288"
+    ]
+  },
+  "timing": {
+    "total_seconds": 1146.7075233409705,
+    "mean_seconds_per_query": 38.22358411136568,
+    "p95_seconds_per_query": 41.055555155006004
+  },
+  "wall_seconds": 1147.4901709719852,
+  "all_candidate_sets_unchanged": true,
+  "all_scores_valid": true
+}

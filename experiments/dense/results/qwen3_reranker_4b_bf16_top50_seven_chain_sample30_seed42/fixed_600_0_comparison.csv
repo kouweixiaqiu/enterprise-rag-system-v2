@@ -1,0 +1,4 @@
+system,query_count,r5_hits,top5_new_hits,top5_dropped_hits,top5_net_change
+pplx_original,30,27,0,0,0
+pplx_reranked,30,23,1,5,-4
+rrf_reranked,30,23,2,4,-2

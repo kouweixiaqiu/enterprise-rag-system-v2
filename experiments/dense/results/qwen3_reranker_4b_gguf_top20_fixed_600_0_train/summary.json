@@ -1,0 +1,56 @@
+{
+  "all_rank_21_50_orders_unchanged": true,
+  "all_scores_valid": true,
+  "all_top_20_document_sets_unchanged": true,
+  "candidate_documents_per_query": 50,
+  "comparators": {
+    "pplx_baseline": {
+      "hits_at_5": 335,
+      "mrr_at_10": 0.6395802469135803,
+      "query_count": 450,
+      "recall_at_5": 0.7444444444444445
+    },
+    "qwen_0.6b_top_20": {
+      "hits_at_5": 306,
+      "mrr_at_10": 0.6022980599647266,
+      "query_count": 450,
+      "recall_at_5": 0.68
+    }
+  },
+  "evaluation_split": "TRAIN only",
+  "experiment_wall_seconds": 1376.632582311002,
+  "llama_server_build": "1 (b4d6c7d8f)",
+  "longest_input_tokens": 1365,
+  "metrics": {
+    "pplx_baseline": {
+      "hits_at_5": 335,
+      "mrr_at_10": 0.6395802469135803,
+      "query_count": 450,
+      "recall_at_5": 0.7444444444444445
+    },
+    "qwen_4b_top_20": {
+      "hits_at_5": 316,
+      "mrr_at_10": 0.5486075837742505,
+      "query_count": 450,
+      "recall_at_5": 0.7022222222222222
+    }
+  },
+  "model": "Qwen3-Reranker-4B-Q4_K_M.gguf",
+  "model_path": "/home/fuxuanyi/models/qwen3-reranker-4b/Qwen3-Reranker-4B-Q4_K_M.gguf",
+  "pair_count": 9000,
+  "query_count": 450,
+  "qwen_4b_vs_pplx_top_5": {
+    "dropped_out_of_top_5": 39,
+    "net_change": -19,
+    "new_into_top_5": 20
+  },
+  "required_slot_context": 1408,
+  "rerank_timing": {
+    "mean_seconds_per_query": 3.12780875692891,
+    "p95_seconds_per_query": 4.385085730995343,
+    "total_seconds": 1407.5139406180097
+  },
+  "reranked_documents_per_query": 20,
+  "score_method": "llama-server /v1/rerank relevance_score",
+  "status": "complete"
+}

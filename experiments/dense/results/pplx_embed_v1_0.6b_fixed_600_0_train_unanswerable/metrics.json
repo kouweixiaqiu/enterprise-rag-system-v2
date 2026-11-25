@@ -1,0 +1,163 @@
+{
+  "all_queries_have_distinct_top_k_documents": true,
+  "cache": {
+    "directory": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_0",
+    "manifest": {
+      "batch_size": 16,
+      "chunk_config": {
+        "name": "fixed_600_0",
+        "overlap": 0,
+        "size": 600,
+        "step": 600,
+        "strategy": "fixed"
+      },
+      "chunk_count": 182835,
+      "chunks_per_second": 15.817408477656631,
+      "corpus_sha256": "00efdb83efd0ca830b00dc5fdde7269cefd8467c42b70e6b808697cd02d228ef",
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "document_count": 28482,
+      "document_encoding_seconds": 11559.099599550029,
+      "document_encoding_wall_seconds": 11645.883487624,
+      "embedding_dimension": 1024,
+      "input_format": "document title + two newlines + fixed-600/0 chunk body",
+      "metadata_sha256": "1e7f82ffcc860e16d1faf5e0e2b360790c1e5c484e062beda0e524278edf2afb",
+      "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+      "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+      "native_output_dtype": "float32",
+      "normalized_for_cosine": true,
+      "offline": true,
+      "query_instruction": null,
+      "saved_dtype": "float32",
+      "status": "complete"
+    },
+    "reused": true
+  },
+  "configuration": {
+    "chunk_config": "fixed_600_0",
+    "document_aggregation": "maximum chunk score",
+    "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+    "model_parameter_dtype": "torch.float32",
+    "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+    "query_batch_size": 16,
+    "query_instruction": null,
+    "retriever": "PPLX Dense",
+    "similarity": "normalized vector dot product",
+    "tie_break": "score descending, document_id ascending"
+  },
+  "environment": {
+    "numpy": "2.5.5",
+    "python": "3.12.3",
+    "sentence_transformers": "6.3.0",
+    "torch": "2.15.0+cu132"
+  },
+  "evaluation_split": "TRAIN ANSWERABLE=N",
+  "inputs": {
+    "chunk_metadata": "data/processed/techqa/dense_cache/bge-small-en-v1.5_fixed_600_0/chunk_metadata.jsonl",
+    "chunk_metadata_sha256": "1e7f82ffcc860e16d1faf5e0e2b360790c1e5c484e062beda0e524278edf2afb",
+    "raw_train": "data/raw/techqa/TechQA/training_and_dev/training_Q_A.json",
+    "raw_train_sha256": "0e9b77bc1ad7f7e95d05b095a34b1ece75c679575747949288a1d0f7470f4f46"
+  },
+  "label_note": "These questions have DOCUMENT='-' and ANSWER='-'. Recall and MRR are undefined and are intentionally not reported. DOC_IDS is not treated as relevance ground truth.",
+  "query_count": 150,
+  "ranking_depth": 100,
+  "resources": {
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "process_peak_ram_gib": 3.338214874267578,
+    "query_encoding_peak_gpu_allocated_gib": 2.557093620300293,
+    "query_encoding_peak_gpu_reserved_gib": 2.853515625,
+    "whole_run_peak_gpu_allocated_gib": 2.9275965690612793,
+    "whole_run_peak_gpu_reserved_gib": 2.94140625
+  },
+  "score_distributions": {
+    "rank_1": {
+      "count": 150,
+      "max": 0.9081059694290161,
+      "mean": 0.6895196308692296,
+      "median": 0.679678350687027,
+      "min": 0.4494030177593231,
+      "p05": 0.519506961107254,
+      "p95": 0.8628720939159391,
+      "std": 0.10612908037238183
+    },
+    "rank_10": {
+      "count": 150,
+      "max": 0.8527693748474121,
+      "mean": 0.5771364796161652,
+      "median": 0.5665310621261597,
+      "min": 0.36629191040992737,
+      "p05": 0.43034340888261796,
+      "p95": 0.7390968859195707,
+      "std": 0.09519542275990238
+    },
+    "rank_100": {
+      "count": 150,
+      "max": 0.6893838047981262,
+      "mean": 0.47615678668022154,
+      "median": 0.47028785943984985,
+      "min": 0.27123135328292847,
+      "p05": 0.3565036907792091,
+      "p95": 0.6305890083312987,
+      "std": 0.0850456720072568
+    },
+    "rank_20": {
+      "count": 150,
+      "max": 0.8281396627426147,
+      "mean": 0.549379096031189,
+      "median": 0.5386524796485901,
+      "min": 0.33516940474510193,
+      "p05": 0.4142058059573174,
+      "p95": 0.7122053831815719,
+      "std": 0.09598190165513155
+    },
+    "rank_5": {
+      "count": 150,
+      "max": 0.8610681295394897,
+      "mean": 0.6050508173306783,
+      "median": 0.5985391438007355,
+      "min": 0.39854103326797485,
+      "p05": 0.4548259869217873,
+      "p95": 0.762691769003868,
+      "std": 0.09383120615518732
+    },
+    "rank_50": {
+      "count": 150,
+      "max": 0.713124692440033,
+      "mean": 0.5066738307476044,
+      "median": 0.49808864295482635,
+      "min": 0.2997424602508545,
+      "p05": 0.3805133745074272,
+      "p95": 0.6586178570985793,
+      "std": 0.0865962261061844
+    }
+  },
+  "score_margin_distributions": {
+    "top1_minus_top2": {
+      "count": 150,
+      "max": 0.3306637406349182,
+      "mean": 0.047337202628453576,
+      "median": 0.026919811964035034,
+      "min": 0.00018990039825439453,
+      "p05": 0.0012360185384750367,
+      "p95": 0.1796377003192899,
+      "std": 0.058455736721729705
+    },
+    "top1_minus_top5": {
+      "count": 150,
+      "max": 0.3799871802330017,
+      "mean": 0.08446881353855133,
+      "median": 0.06213650107383728,
+      "min": 0.00583416223526001,
+      "p05": 0.01747191548347473,
+      "p95": 0.23060599565505951,
+      "std": 0.06779892507861214
+    }
+  },
+  "status": "complete",
+  "timing": {
+    "experiment_wall_seconds": 12.33007688400005,
+    "query_encoding_queries_per_second": 29.706837138958136,
+    "query_encoding_seconds": 5.0493426580000005,
+    "retrieval_queries_per_second": 132.8893998149558,
+    "retrieval_seconds": 1.1287582020000855
+  }
+}

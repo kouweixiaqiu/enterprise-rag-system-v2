@@ -1,0 +1,41 @@
+{
+  "all_scores_valid": true,
+  "all_top_20_document_sets_unchanged": true,
+  "candidate_documents_per_query": 20,
+  "estimated_9000_pair_seconds": 7232.028312600142,
+  "evaluation_split": "TRAIN only",
+  "gpu_memory_used_before_scoring_mib": 7560,
+  "llama_server_endpoint": "http://127.0.0.1:18080/v1/rerank",
+  "mode": "local_llama_server_smoke_test",
+  "model": "Qwen3-Reranker-4B-Q4_K_M.gguf",
+  "model_path": "/home/fuxuanyi/models/qwen3-reranker-4b/Qwen3-Reranker-4B-Q4_K_M.gguf",
+  "pair_count": 80,
+  "peak_total_gpu_memory_used_mib": 7722,
+  "query_count": 4,
+  "reference_rank_changes": [
+    {
+      "after": 1,
+      "before": 1,
+      "question_id": "TRAIN_Q000"
+    },
+    {
+      "after": 1,
+      "before": 1,
+      "question_id": "TRAIN_Q001"
+    },
+    {
+      "after": 4,
+      "before": 3,
+      "question_id": "TRAIN_Q003"
+    },
+    {
+      "after": 2,
+      "before": 3,
+      "question_id": "TRAIN_Q005"
+    }
+  ],
+  "request_count": 4,
+  "scoring_seconds": 64.28469611200126,
+  "seconds_per_pair": 0.8035587014000157,
+  "status": "passed"
+}

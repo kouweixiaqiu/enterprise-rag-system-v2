@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "chain": "fixed_600_0_rrf",
+  "chunk_config": "fixed_600_0",
+  "ranking_source": "rrf",
+  "source_configuration": "k1=1.6,b=1.0,B50/P100,PPLX:BM25=3:1,k=60",
+  "source_rankings": "experiments/hybrid/results/pplx_bm25_rrf_grid_train/fixed_600_0/k1_1.6_b_1/bm25_d50_pplx_d100_pplxw3_bm25w1_k60/rrf_rankings.jsonl",
+  "query_count": 1,
+  "candidate_documents_per_query": 50,
+  "metrics_before": {
+    "query_count": 1,
+    "hits_at_1": 1,
+    "recall_at_1": 1.0,
+    "hits_at_5": 1,
+    "recall_at_5": 1.0,
+    "hits_at_10": 1,
+    "recall_at_10": 1.0,
+    "hits_at_20": 1,
+    "recall_at_20": 1.0
+  },
+  "metrics_after": {
+    "query_count": 1,
+    "hits_at_1": 1,
+    "recall_at_1": 1.0,
+    "hits_at_5": 1,
+    "recall_at_5": 1.0,
+    "hits_at_10": 1,
+    "recall_at_10": 1.0,
+    "hits_at_20": 1,
+    "recall_at_20": 1.0
+  },
+  "top_5_change": {
+    "new_hits": 0,
+    "dropped_hits": 0,
+    "net_change": 0,
+    "new_question_ids": [],
+    "dropped_question_ids": []
+  },
+  "timing": {
+    "total_seconds": 1.4807039739971515,
+    "mean_seconds_per_query": 1.4807039739971515,
+    "p95_seconds_per_query": 1.4807039739971515
+  },
+  "wall_seconds": 1.6895482719992287,
+  "all_candidate_sets_unchanged": true,
+  "all_scores_valid": true
+}

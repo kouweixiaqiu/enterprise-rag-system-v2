@@ -1,0 +1,10 @@
+{
+  "source_rerank_run": "experiments/dense/results/qwen3_reranker_4b_bf16_top50_seven_chain_sample30_seed42",
+  "previous_review": "experiments/hybrid/analysis/top5_evidence_sample30_seed42",
+  "questions": 30,
+  "chains": 7,
+  "judgments": 210,
+  "same_five_chunks": 0,
+  "reused_labels": 0,
+  "manually_reviewed_changed_cases": 210
+}

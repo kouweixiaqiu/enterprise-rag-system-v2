@@ -1,0 +1,45 @@
+{
+  "all_scores_valid": true,
+  "all_top_20_document_sets_unchanged": true,
+  "batch_size": 4,
+  "candidate_documents_per_query": 20,
+  "evaluation_split": "TRAIN only",
+  "instruction": "Given a web search query, retrieve relevant passages that answer the query",
+  "longest_input_tokens": 545,
+  "max_length": 2048,
+  "mode": "offline_smoke_test",
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "model_load_seconds": 2.725587611001174,
+  "model_snapshot": "/home/fuxuanyi/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "pair_count": 80,
+  "peak_gpu_memory_allocated_gib": 2.4293742179870605,
+  "peak_gpu_memory_reserved_gib": 2.990234375,
+  "query_count": 4,
+  "reference_rank_changes": [
+    {
+      "after": 1,
+      "before": 1,
+      "question_id": "TRAIN_Q000"
+    },
+    {
+      "after": 1,
+      "before": 1,
+      "question_id": "TRAIN_Q001"
+    },
+    {
+      "after": 7,
+      "before": 3,
+      "question_id": "TRAIN_Q003"
+    },
+    {
+      "after": 2,
+      "before": 3,
+      "question_id": "TRAIN_Q005"
+    }
+  ],
+  "revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "score_method": "softmax(no_logit, yes_logit)[yes]",
+  "scoring_seconds": 3.1753334919994813,
+  "status": "passed",
+  "wall_seconds": 6.611624412998935
+}

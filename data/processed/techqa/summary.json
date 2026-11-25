@@ -1,0 +1,41 @@
+{
+  "outputs": {
+    "corpus.jsonl": {
+      "records": 28482,
+      "sha256": "00efdb83efd0ca830b00dc5fdde7269cefd8467c42b70e6b808697cd02d228ef"
+    },
+    "dev_queries.jsonl": {
+      "matched_reference_documents": 147,
+      "missing_reference_documents": 0,
+      "records": 147,
+      "sha256": "ba97c1339768b18e10b86a650c98662705957b3811aa5e512a557044cc9e0ea8"
+    },
+    "excluded_dev.jsonl": {
+      "records": 13,
+      "sha256": "2eb5cd3bb10d5a0b7f13a413d0c7a7d3af07396d079c1a98f0e8adcbba72ac10"
+    },
+    "train_queries.jsonl": {
+      "matched_reference_documents": 450,
+      "missing_reference_documents": 0,
+      "records": 450,
+      "sha256": "297a3946e624ad7474b13c0a3e374a1717b3e79bfd53943b055e00f2b24521d4"
+    }
+  },
+  "rules": {
+    "corpus_filter": "keep every document whose text field is non-empty",
+    "dev_deduplication": "exclude DEV when the untouched QUESTION_TITLE and QUESTION_TEXT pair exactly matches an answerable TRAIN record",
+    "qa_filter": "ANSWERABLE == 'Y'",
+    "query_construction": "strip title and body; join non-empty body to title with two newlines; use title alone when body is empty"
+  },
+  "sources": {
+    "dev_Q_A.json": {
+      "sha256": "df62a05619b07b386159bcbaaf3e0e50be93eaf983aea8a5f8ed1513a3c2ec6f"
+    },
+    "training_Q_A.json": {
+      "sha256": "0e9b77bc1ad7f7e95d05b095a34b1ece75c679575747949288a1d0f7470f4f46"
+    },
+    "training_dev_technotes.json": {
+      "sha256": "69261b5f4436d70379fd7172a8d97062c93f5d433c386d196937d198c66bf75a"
+    }
+  }
+}

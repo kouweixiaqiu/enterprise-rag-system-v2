@@ -1,0 +1,85 @@
+{
+  "artifacts": {
+    "metrics": "experiments/hybrid/results/pplx_bm25_rrf_grid_train/fixed_1200_300/k1_1.2_b_0.5/bm25_d100_pplx_d50_pplxw1_bm25w1_k60/metrics.json",
+    "rankings": "experiments/hybrid/results/pplx_bm25_rrf_grid_train/fixed_1200_300/k1_1.2_b_0.5/bm25_d100_pplx_d50_pplxw1_bm25w1_k60/rrf_rankings.jsonl"
+  },
+  "candidate_union_count": {
+    "max": 149,
+    "mean": 123.42444444444445,
+    "min": 100
+  },
+  "chunk_config": "fixed_1200_300",
+  "comparison_vs_pplx": {
+    "top_20": {
+      "dropped_hits": 20,
+      "net_change": -9,
+      "new_hits": 11,
+      "pplx_hits": 375,
+      "rrf_hits": 366
+    },
+    "top_5": {
+      "dropped_hits": 39,
+      "net_change": -23,
+      "new_hits": 16
+    }
+  },
+  "configuration": {
+    "bm25_depth": 100,
+    "bm25_weight": 1.0,
+    "name": "bm25_d100_pplx_d50_pplxw1_bm25w1_k60",
+    "pplx_depth": 50,
+    "pplx_weight": 1.0,
+    "rrf_k": 60
+  },
+  "evaluation_cutoffs": [
+    1,
+    5,
+    10,
+    20,
+    50,
+    100
+  ],
+  "evaluation_split": "TRAIN only",
+  "metrics": {
+    "hits_at_1": 232,
+    "hits_at_10": 348,
+    "hits_at_100": 415,
+    "hits_at_20": 366,
+    "hits_at_5": 307,
+    "hits_at_50": 402,
+    "query_count": 450,
+    "recall_at_1": 0.5155555555555555,
+    "recall_at_10": 0.7733333333333333,
+    "recall_at_100": 0.9222222222222223,
+    "recall_at_20": 0.8133333333333334,
+    "recall_at_5": 0.6822222222222222,
+    "recall_at_50": 0.8933333333333333
+  },
+  "pplx_baseline_metrics": {
+    "hits_at_1": 252,
+    "hits_at_10": 350,
+    "hits_at_100": 414,
+    "hits_at_20": 375,
+    "hits_at_5": 330,
+    "hits_at_50": 399,
+    "query_count": 450,
+    "recall_at_1": 0.56,
+    "recall_at_10": 0.7777777777777778,
+    "recall_at_100": 0.92,
+    "recall_at_20": 0.8333333333333334,
+    "recall_at_5": 0.7333333333333333,
+    "recall_at_50": 0.8866666666666667
+  },
+  "rrf": {
+    "candidate_merge_key": "document_id",
+    "formula": "sum(route_weight / (k + route_rank))",
+    "missing_route_contribution": 0,
+    "tie_break": "rrf_score descending, then document_id ascending"
+  },
+  "saved_fused_ranking_depth": "full candidate union",
+  "sources": {
+    "bm25_rankings": "experiments/chunk/bm25_parameter_grid_train/fixed_1200_300/k1_1.2_b_0.5/rankings_top100.jsonl",
+    "pplx_rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_1200_300/dense_rankings_top100.jsonl"
+  },
+  "status": "complete"
+}

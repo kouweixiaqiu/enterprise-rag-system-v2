@@ -1,0 +1,89 @@
+{
+  "all_queries_have_50_distinct_documents": true,
+  "cache": {
+    "chunk_count": 182835,
+    "directory": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_0",
+    "document_count": 28482,
+    "manifest": {
+      "batch_size": 16,
+      "chunk_config": {
+        "name": "fixed_600_0",
+        "overlap": 0,
+        "size": 600,
+        "step": 600,
+        "strategy": "fixed"
+      },
+      "chunk_count": 182835,
+      "chunks_per_second": 15.817408477656631,
+      "corpus_sha256": "00efdb83efd0ca830b00dc5fdde7269cefd8467c42b70e6b808697cd02d228ef",
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "document_count": 28482,
+      "document_encoding_seconds": 11559.099599550029,
+      "document_encoding_wall_seconds": 11645.883487624,
+      "embedding_dimension": 1024,
+      "input_format": "document title + two newlines + fixed-600/0 chunk body",
+      "metadata_sha256": "1e7f82ffcc860e16d1faf5e0e2b360790c1e5c484e062beda0e524278edf2afb",
+      "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+      "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+      "native_output_dtype": "float32",
+      "normalized_for_cosine": true,
+      "offline": true,
+      "query_instruction": null,
+      "saved_dtype": "float32",
+      "status": "complete"
+    },
+    "reused": true
+  },
+  "configuration": {
+    "chunk_config": "fixed_600_0",
+    "document_aggregation": "maximum chunk score",
+    "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+    "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+    "query_instruction": null,
+    "retriever": "dense",
+    "similarity": "normalized vector dot product",
+    "tie_break": "score descending, document_id ascending"
+  },
+  "environment": {
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "numpy": "2.5.5",
+    "python": "3.12.3",
+    "sentence_transformers": "6.3.0",
+    "torch": "2.15.0+cu132"
+  },
+  "evaluation_split": "DEV answerable, exact TRAIN duplicates excluded",
+  "inputs": {
+    "chunk_metadata": "data/processed/techqa/dense_cache/bge-small-en-v1.5_fixed_600_0/chunk_metadata.jsonl",
+    "dev_queries": "data/processed/techqa/dev_queries.jsonl",
+    "dev_queries_sha256": "ba97c1339768b18e10b86a650c98662705957b3811aa5e512a557044cc9e0ea8"
+  },
+  "metrics": {
+    "hits_at_1": 81,
+    "hits_at_10": 125,
+    "hits_at_20": 129,
+    "hits_at_5": 116,
+    "hits_at_50": 134,
+    "mrr_at_10": 0.6496949573480185,
+    "query_count": 147,
+    "recall_at_1": 0.5510204081632653,
+    "recall_at_10": 0.8503401360544217,
+    "recall_at_10_percent": 85.03401360544218,
+    "recall_at_1_percent": 55.10204081632653,
+    "recall_at_20": 0.8775510204081632,
+    "recall_at_20_percent": 87.75510204081633,
+    "recall_at_5": 0.7891156462585034,
+    "recall_at_50": 0.9115646258503401,
+    "recall_at_50_percent": 91.15646258503402,
+    "recall_at_5_percent": 78.91156462585035
+  },
+  "query_count": 147,
+  "query_encoding_peak_gpu_memory_allocated_gib": 2.7030506134033203,
+  "query_encoding_peak_gpu_memory_reserved_gib": 3.08984375,
+  "ranking_depth": 50,
+  "status": "complete",
+  "timing": {
+    "experiment_wall_seconds": 11.618303955001466,
+    "query_encoding_seconds": 4.6394070079986705,
+    "retrieval_seconds": 1.0126526079984615
+  }
+}

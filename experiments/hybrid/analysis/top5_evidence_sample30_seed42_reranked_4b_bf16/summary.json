@@ -1,0 +1,173 @@
+[
+  {
+    "chain": "fixed_1200_0_rrf",
+    "questions": 30,
+    "r5_before_hits": 25,
+    "r5_after_hits": 24,
+    "complete_before": 16,
+    "complete_after": 21,
+    "new_complete_count": 6,
+    "new_complete_question_ids": [
+      "TRAIN_Q511",
+      "TRAIN_Q462",
+      "TRAIN_Q375",
+      "TRAIN_Q015",
+      "TRAIN_Q494",
+      "TRAIN_Q482"
+    ],
+    "lost_complete_count": 1,
+    "lost_complete_question_ids": [
+      "TRAIN_Q089"
+    ],
+    "partial_after": 5,
+    "no_evidence_after": 4
+  },
+  {
+    "chain": "fixed_1200_300_rrf",
+    "questions": 30,
+    "r5_before_hits": 25,
+    "r5_after_hits": 23,
+    "complete_before": 18,
+    "complete_after": 21,
+    "new_complete_count": 6,
+    "new_complete_question_ids": [
+      "TRAIN_Q511",
+      "TRAIN_Q375",
+      "TRAIN_Q017",
+      "TRAIN_Q386",
+      "TRAIN_Q494",
+      "TRAIN_Q482"
+    ],
+    "lost_complete_count": 3,
+    "lost_complete_question_ids": [
+      "TRAIN_Q089",
+      "TRAIN_Q054",
+      "TRAIN_Q127"
+    ],
+    "partial_after": 5,
+    "no_evidence_after": 4
+  },
+  {
+    "chain": "fixed_600_0_rrf",
+    "questions": 30,
+    "r5_before_hits": 25,
+    "r5_after_hits": 23,
+    "complete_before": 10,
+    "complete_after": 8,
+    "new_complete_count": 3,
+    "new_complete_question_ids": [
+      "TRAIN_Q069",
+      "TRAIN_Q015",
+      "TRAIN_Q482"
+    ],
+    "lost_complete_count": 5,
+    "lost_complete_question_ids": [
+      "TRAIN_Q294",
+      "TRAIN_Q018",
+      "TRAIN_Q154",
+      "TRAIN_Q350",
+      "TRAIN_Q415"
+    ],
+    "partial_after": 17,
+    "no_evidence_after": 5
+  },
+  {
+    "chain": "fixed_600_150_rrf",
+    "questions": 30,
+    "r5_before_hits": 25,
+    "r5_after_hits": 24,
+    "complete_before": 13,
+    "complete_after": 13,
+    "new_complete_count": 4,
+    "new_complete_question_ids": [
+      "TRAIN_Q441",
+      "TRAIN_Q069",
+      "TRAIN_Q017",
+      "TRAIN_Q482"
+    ],
+    "lost_complete_count": 4,
+    "lost_complete_question_ids": [
+      "TRAIN_Q064",
+      "TRAIN_Q294",
+      "TRAIN_Q415",
+      "TRAIN_Q127"
+    ],
+    "partial_after": 13,
+    "no_evidence_after": 4
+  },
+  {
+    "chain": "paragraph_merge_1200_0_rrf",
+    "questions": 30,
+    "r5_before_hits": 25,
+    "r5_after_hits": 24,
+    "complete_before": 19,
+    "complete_after": 20,
+    "new_complete_count": 4,
+    "new_complete_question_ids": [
+      "TRAIN_Q511",
+      "TRAIN_Q064",
+      "TRAIN_Q017",
+      "TRAIN_Q015"
+    ],
+    "lost_complete_count": 3,
+    "lost_complete_question_ids": [
+      "TRAIN_Q089",
+      "TRAIN_Q415",
+      "TRAIN_Q127"
+    ],
+    "partial_after": 6,
+    "no_evidence_after": 4
+  },
+  {
+    "chain": "paragraph_merge_600_0_rrf",
+    "questions": 30,
+    "r5_before_hits": 25,
+    "r5_after_hits": 23,
+    "complete_before": 11,
+    "complete_after": 12,
+    "new_complete_count": 6,
+    "new_complete_question_ids": [
+      "TRAIN_Q069",
+      "TRAIN_Q064",
+      "TRAIN_Q054",
+      "TRAIN_Q017",
+      "TRAIN_Q015",
+      "TRAIN_Q386"
+    ],
+    "lost_complete_count": 5,
+    "lost_complete_question_ids": [
+      "TRAIN_Q162",
+      "TRAIN_Q402",
+      "TRAIN_Q294",
+      "TRAIN_Q415",
+      "TRAIN_Q127"
+    ],
+    "partial_after": 12,
+    "no_evidence_after": 6
+  },
+  {
+    "chain": "fixed_600_0_pplx",
+    "questions": 30,
+    "r5_before_hits": 27,
+    "r5_after_hits": 23,
+    "complete_before": 11,
+    "complete_after": 8,
+    "new_complete_count": 3,
+    "new_complete_question_ids": [
+      "TRAIN_Q069",
+      "TRAIN_Q015",
+      "TRAIN_Q482"
+    ],
+    "lost_complete_count": 6,
+    "lost_complete_question_ids": [
+      "TRAIN_Q064",
+      "TRAIN_Q294",
+      "TRAIN_Q018",
+      "TRAIN_Q154",
+      "TRAIN_Q350",
+      "TRAIN_Q415"
+    ],
+    "partial_after": 17,
+    "no_evidence_after": 5
+  }
+]

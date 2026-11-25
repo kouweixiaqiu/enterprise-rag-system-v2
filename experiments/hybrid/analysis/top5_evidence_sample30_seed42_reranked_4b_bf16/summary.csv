@@ -1,0 +1,8 @@
+chain,questions,r5_before_hits,r5_after_hits,complete_before,complete_after,new_complete_count,lost_complete_count,partial_after,no_evidence_after
+fixed_1200_0_rrf,30,25,24,16,21,6,1,5,4
+fixed_1200_300_rrf,30,25,23,18,21,6,3,5,4
+fixed_600_0_rrf,30,25,23,10,8,3,5,17,5
+fixed_600_150_rrf,30,25,24,13,13,4,4,13,4
+paragraph_merge_1200_0_rrf,30,25,24,19,20,4,3,6,4
+paragraph_merge_600_0_rrf,30,25,23,11,12,6,5,12,6
+fixed_600_0_pplx,30,27,23,11,8,3,6,17,5

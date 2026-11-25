@@ -1,0 +1,70 @@
+{
+  "baseline_335_of_450_confirmed": true,
+  "candidate_documents_per_query": 50,
+  "evaluation_split": "TRAIN only",
+  "metrics": {
+    "baseline": {
+      "dropped_out_of_top_5": 0,
+      "hits_at_5": 335,
+      "mrr_at_10": 0.6395802469135803,
+      "new_into_top_5": 0,
+      "query_count": 450,
+      "recall_at_5": 0.7444444444444445
+    },
+    "rerank_top_20": {
+      "dropped_out_of_top_5": 64,
+      "hits_at_5": 285,
+      "mrr_at_10": 0.5194303350970018,
+      "new_into_top_5": 14,
+      "query_count": 450,
+      "recall_at_5": 0.6333333333333333
+    },
+    "rerank_top_50": {
+      "dropped_out_of_top_5": 77,
+      "hits_at_5": 270,
+      "mrr_at_10": 0.4933447971781305,
+      "new_into_top_5": 12,
+      "query_count": 450,
+      "recall_at_5": 0.6
+    }
+  },
+  "model": {
+    "batch_size": 8,
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "dtype": "float32",
+    "max_length": 512,
+    "name": "BAAI/bge-reranker-base",
+    "revision": "75bc78764e5eeb49e6a4a085e65eb2985ce82320",
+    "score": "raw model logit",
+    "snapshot": "/home/fuxuanyi/AI_projects/enterprise-rag-system/artifacts/model_cache/huggingface/models--BAAI--bge-reranker-base/snapshots/75bc78764e5eeb49e6a4a085e65eb2985ce82320"
+  },
+  "passage_format": "document title + two newlines + representative fixed-600/0 body",
+  "peak_gpu_memory_allocated_gib": 1.2898378372192383,
+  "peak_gpu_memory_reserved_gib": 1.619140625,
+  "query_count": 450,
+  "representative_chunk_fallback_count": 0,
+  "same_candidate_set_confirmed": true,
+  "source_rankings": "experiments/dense/results/pplx_embed_v1_0.6b_fixed_600_0_train/dense_rankings_top100.jsonl",
+  "status": "complete",
+  "timing": {
+    "additional_30": {
+      "mean_seconds_per_query": 0.4640685981333364,
+      "median_seconds_per_query": 0.44562529449922295,
+      "p95_seconds_per_query": 0.6961057739990792,
+      "total_seconds": 208.83086916000138
+    },
+    "experiment_wall_seconds": 348.6928558340005,
+    "top_20": {
+      "mean_seconds_per_query": 0.30236119749552826,
+      "median_seconds_per_query": 0.29048752849939774,
+      "p95_seconds_per_query": 0.46614645900081086,
+      "total_seconds": 136.06253887298772
+    },
+    "top_50": {
+      "mean_seconds_per_query": 0.7664297956288647,
+      "median_seconds_per_query": 0.7337853549997817,
+      "p95_seconds_per_query": 1.1599917019993882,
+      "total_seconds": 344.8934080329891
+    }
+  }
+}

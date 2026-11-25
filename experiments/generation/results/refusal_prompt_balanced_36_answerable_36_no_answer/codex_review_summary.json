@@ -1,0 +1,65 @@
+{
+  "reviewer": "Codex",
+  "standard": "Core answer correct, required steps and applicability conditions retained, and key claims supported by the actual supplied context.",
+  "results": {
+    "baseline": {
+      "tune": {
+        "case_count": 48,
+        "complete_pass": 30,
+        "no_answer_pass": 23,
+        "answerable_pass": 7
+      },
+      "holdout": {
+        "case_count": 24,
+        "complete_pass": 16,
+        "no_answer_pass": 12,
+        "answerable_pass": 4
+      },
+      "all": {
+        "case_count": 72,
+        "complete_pass": 46,
+        "no_answer_pass": 35,
+        "answerable_pass": 11
+      }
+    },
+    "balanced": {
+      "tune": {
+        "case_count": 48,
+        "complete_pass": 27,
+        "no_answer_pass": 18,
+        "answerable_pass": 9
+      },
+      "holdout": {
+        "case_count": 24,
+        "complete_pass": 17,
+        "no_answer_pass": 12,
+        "answerable_pass": 5
+      },
+      "all": {
+        "case_count": 72,
+        "complete_pass": 44,
+        "no_answer_pass": 30,
+        "answerable_pass": 14
+      }
+    }
+  },
+  "balanced_vs_baseline": {
+    "new_complete_pass": 4,
+    "new_complete_pass_case_keys": [
+      "answerable:TRAIN_Q069",
+      "answerable:TRAIN_Q441",
+      "answerable:TRAIN_Q535",
+      "answerable:TRAIN_Q580"
+    ],
+    "regressed": 6,
+    "regressed_case_keys": [
+      "answerable:TRAIN_Q172",
+      "no_answer:TRAIN_Q197",
+      "no_answer:TRAIN_Q364",
+      "no_answer:TRAIN_Q476",
+      "no_answer:TRAIN_Q484",
+      "no_answer:TRAIN_Q498"
+    ],
+    "net_change": -2
+  }
+}

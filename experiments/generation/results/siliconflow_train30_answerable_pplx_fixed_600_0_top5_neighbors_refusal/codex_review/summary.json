@@ -1,0 +1,29 @@
+{
+  "reviewer": "Codex",
+  "question_count": 30,
+  "decision_counts": {
+    "ANSWER": 13,
+    "INSUFFICIENT_CONTEXT": 17,
+    "INVALID_FORMAT": 0
+  },
+  "prompt_v2_complete_pass": 17,
+  "refusal_prompt_complete_pass": 6,
+  "new_pass_count": 0,
+  "new_pass_question_ids": [],
+  "regression_count": 11,
+  "regression_question_ids": [
+    "TRAIN_Q069",
+    "TRAIN_Q144",
+    "TRAIN_Q064",
+    "TRAIN_Q462",
+    "TRAIN_Q402",
+    "TRAIN_Q018",
+    "TRAIN_Q350",
+    "TRAIN_Q386",
+    "TRAIN_Q127",
+    "TRAIN_Q494",
+    "TRAIN_Q482"
+  ],
+  "net_change": -11,
+  "conclusion": "The refusal prompt is too conservative for answerable questions and should not replace prompt_v2 in its current form."
+}

@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "bm25_rankings_reused": "experiments/hybrid/results/fixed_600_0/bm25_top100.jsonl",
+    "cache": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_0",
+    "dense_rankings": "experiments/dense/results/pplx_embed_v1_0.6b_fixed_600_0_train/dense_rankings_top100.jsonl",
+    "hybrid_rankings": "experiments/dense/results/pplx_embed_v1_0.6b_fixed_600_0_train/hybrid_rankings_top50.jsonl"
+  },
+  "bge_small_dense": {
+    "recall_at_5": 0.6444444444444445,
+    "recall_at_50": 0.8555555555555555
+  },
+  "bge_small_hybrid": {
+    "recall_at_5": 0.6577777777777778,
+    "recall_at_50": 0.8555555555555555
+  },
+  "chunk_config": "fixed_600_0",
+  "delta_pplx_minus_bge_small": {
+    "dense_recall_at_5": 0.09999999999999998,
+    "dense_recall_at_50": 0.033333333333333326,
+    "hybrid_recall_at_5": 0.046666666666666634,
+    "hybrid_recall_at_50": 0.028888888888888964
+  },
+  "encoding": {
+    "batch_size": 16,
+    "chunk_config": {
+      "name": "fixed_600_0",
+      "overlap": 0,
+      "size": 600,
+      "step": 600,
+      "strategy": "fixed"
+    },
+    "chunk_count": 182835,
+    "chunks_per_second": 15.817408477656631,
+    "corpus_sha256": "00efdb83efd0ca830b00dc5fdde7269cefd8467c42b70e6b808697cd02d228ef",
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "document_count": 28482,
+    "document_encoding_seconds": 11559.099599550029,
+    "document_encoding_wall_seconds": 11645.883487624,
+    "embedding_dimension": 1024,
+    "input_format": "document title + two newlines + fixed-600/0 chunk body",
+    "metadata_sha256": "1e7f82ffcc860e16d1faf5e0e2b360790c1e5c484e062beda0e524278edf2afb",
+    "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+    "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+    "native_output_dtype": "float32",
+    "normalized_for_cosine": true,
+    "offline": true,
+    "peak_gpu_memory_allocated_gib": 2.8798775672912598,
+    "peak_gpu_memory_reserved_gib": 4.677734375,
+    "query_instruction": null,
+    "saved_dtype": "float32",
+    "status": "complete"
+  },
+  "environment": {
+    "numpy": "2.5.5",
+    "python": "3.12.3",
+    "sentence_transformers": "6.3.0",
+    "torch": "2.15.0+cu132"
+  },
+  "evaluation_split": "TRAIN only",
+  "pplx_dense": {
+    "hits_at_5": 335,
+    "hits_at_50": 400,
+    "query_count": 450,
+    "recall_at_5": 0.7444444444444445,
+    "recall_at_50": 0.8888888888888888
+  },
+  "pplx_hybrid": {
+    "bm25_weight": 1,
+    "dense_weight": 1,
+    "hits_at_5": 317,
+    "hits_at_50": 398,
+    "input_depth_per_route": 50,
+    "query_count": 450,
+    "recall_at_5": 0.7044444444444444,
+    "recall_at_50": 0.8844444444444445,
+    "rrf_k": 60
+  },
+  "status": "complete"
+}

@@ -1,0 +1,38 @@
+{
+  "evaluation_split": "TRAIN only",
+  "generation_file": "experiments/generation/results/siliconflow_train_context_window_seed42_20/generations.jsonl",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "prompt_sha256": "b8933aa4b0eab56ab94a279238799cbc788087050bd3f688185903c4dc7aa9ad",
+  "prompt_template": "configs/generation/answer_with_citations.prompt",
+  "question_ids": [
+    "TRAIN_Q014",
+    "TRAIN_Q017",
+    "TRAIN_Q018",
+    "TRAIN_Q054",
+    "TRAIN_Q058",
+    "TRAIN_Q064",
+    "TRAIN_Q069",
+    "TRAIN_Q089",
+    "TRAIN_Q139",
+    "TRAIN_Q144",
+    "TRAIN_Q154",
+    "TRAIN_Q162",
+    "TRAIN_Q188",
+    "TRAIN_Q294",
+    "TRAIN_Q375",
+    "TRAIN_Q402",
+    "TRAIN_Q441",
+    "TRAIN_Q462",
+    "TRAIN_Q511",
+    "TRAIN_Q513"
+  ],
+  "requests_completed": 40,
+  "retriever": "PPLX fixed_600_0 original Top-5",
+  "sample_size": 20,
+  "seed": 42,
+  "status": "generated_pending_support_audit",
+  "variants": [
+    "representative_only",
+    "representative_with_neighbors"
+  ]
+}

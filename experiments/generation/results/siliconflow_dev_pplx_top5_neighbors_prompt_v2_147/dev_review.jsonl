@@ -1,0 +1,147 @@
+{"question_id":"DEV_Q000","verdict":"通过","reason":"指出 DASH 版本不足并建议升级到 3.1.2.1 或更高，直接解决安装前置条件。"}
+{"question_id":"DEV_Q002","verdict":"通过","reason":"准确识别缺失的 Adwaita GTK 库并给出安装方向，结论受证据支持。"}
+{"question_id":"DEV_Q007","verdict":"通过","reason":"选择 nco-g-socket-java-2_0，并与证据中的 V8.1 发布包和平台信息一致。"}
+{"question_id":"DEV_Q008","verdict":"通过","reason":"正确说明 crypto-export 及 HSM 域、exportable 标记和密钥包装前置条件。"}
+{"question_id":"DEV_Q010","verdict":"通过","reason":"正确诊断非 UTF-8 数据库并要求删除后按正确字符集重建。"}
+{"question_id":"DEV_Q011","verdict":"通过","reason":"给出 -J-Xmx 增大 jextract 堆的核心操作并保留大转储文件这一适用原因。"}
+{"question_id":"DEV_Q012","verdict":"通过","reason":"正确解释 ARG_MAX 限制及旧内核无法提高上限，并给出减少参数量的可行处理。"}
+{"question_id":"DEV_Q013","verdict":"不通过","reason":"回答断言没有额外步骤并转述通用安装流程，未回答 Decision Center 升级后的具体要求。"}
+{"question_id":"DEV_Q016","verdict":"不通过","reason":"只给出自定义 SSP resolver，遗漏打包 XOM、部署 SSP、XU 连接工厂和数据源等必要前置条件。"}
+{"question_id":"DEV_Q019","verdict":"不通过","reason":"仅指向公告和修复页面，未给出 FREAK 对具体 Java 版本及 WMB/IIB 的关键影响范围。"}
+{"question_id":"DEV_Q021","verdict":"通过","reason":"说明本地 WSDL 不适用缓存策略，并给出移除后重新附加 WSDL 的受支持刷新办法。"}
+{"question_id":"DEV_Q022","verdict":"不通过","reason":"错误断言开发者版修复包不存在，遗漏 WAS for Developers 已更名为 WAS ILAN。"}
+{"question_id":"DEV_Q023","verdict":"不通过","reason":"给出泛化排查步骤，却遗漏通过 IlrSessionResponse.getWarnings() 获取静默持久化错误的核心方法。"}
+{"question_id":"DEV_Q025","verdict":"通过","reason":"给出受证据支持的 keytool 导入命令、ASCII 格式及 cer/pem 条件。"}
+{"question_id":"DEV_Q027","verdict":"通过","reason":"给出使用 VScan 规则集和任务配置从共享目录创建批次的完整可执行方案。"}
+{"question_id":"DEV_Q028","verdict":"通过","reason":"准确给出 CVE-2015-4911 的 JAXP 拒绝服务影响、评分和公告入口。"}
+{"question_id":"DEV_Q030","verdict":"不通过","reason":"对 HP-UX 使用了不同的 -Xverbosegclog 方案，未给出证据要求的 -Xverbosegc:file 及配套参数。"}
+{"question_id":"DEV_Q032","verdict":"通过","reason":"正确指出非 text/csv MIME 类型导致下载时追加 .dat，并给出修改 MIME 类型的处理。"}
+{"question_id":"DEV_Q033","verdict":"不通过","reason":"虽识别 2048 字节截断限制，却把用户已在使用的 Log Action 当作规避方案，未提供可行的服务端守护进程方案。"}
+{"question_id":"DEV_Q034","verdict":"不通过","reason":"把 PMI 当作类内存分析器，未推荐证据中的低开销 Health Center。"}
+{"question_id":"DEV_Q035","verdict":"不通过","reason":"给出版本和修复信息但遗漏 zlib windowBits 异常导致远程崩溃这一核心漏洞机制。"}
+{"question_id":"DEV_Q039","verdict":"通过","reason":"正确说明必须先处于 5.0.0.8 维护级别才能升级到 6.0 及以上。"}
+{"question_id":"DEV_Q040","verdict":"通过","reason":"正确把故障归因于 GSKit 动态库路径，并给出设置 LD_LIBRARY_PATH 的适用操作。"}
+{"question_id":"DEV_Q043","verdict":"不通过","reason":"没有给出用户要求的 GA 下载部件号，也未完整列出所需部件和统一解包安装流程。"}
+{"question_id":"DEV_Q046","verdict":"通过","reason":"明确 Viewer Uploader 无删除权限，解释了 Case Manager Box 协作目录不能删除内容的原因。"}
+{"question_id":"DEV_Q047","verdict":"通过","reason":"说明失效维护合同下的下载限制，并给出迁移现有安装包、重新授权或订购介质的路径。"}
+{"question_id":"DEV_Q048","verdict":"不通过","reason":"猜测 IIS 角色组件而未回答所需计数器，也遗漏安装 IIS 6 管理兼容包的实际修复。"}
+{"question_id":"DEV_Q050","verdict":"通过","reason":"准确说明 10.5 FP7 因预取器计算公式变化而从 AUTOMATIC(16) 变为 AUTOMATIC(12)。"}
+{"question_id":"DEV_Q051","verdict":"通过","reason":"正确定位 FEM 中无效的用户或组显示名称属性并要求更正和重启。"}
+{"question_id":"DEV_Q052","verdict":"不通过","reason":"把问题归因于验证凭据中其他过期证书，遗漏同名替换证书需禁用再启用对象以清缓存。"}
+{"question_id":"DEV_Q053","verdict":"不通过","reason":"错误建议卸载整个 WAS，未给出清除 Portal 卸载残留文件后重装的正确做法。"}
+{"question_id":"DEV_Q055","verdict":"不通过","reason":"未说明 CLP 插入未执行代码页转换这一根因，也未给出按数据代码页重新插入的可靠修复。"}
+{"question_id":"DEV_Q063","verdict":"不通过","reason":"虽提到 DeleteChildType，却错误地用 BlankPagesIDBySize 将状态 20 当作页面尺寸，步骤不能按状态删除页面。"}
+{"question_id":"DEV_Q064","verdict":"通过","reason":"明确确认 3DES CipherSpecs 受 Sweet32 影响，关键结论和算法列表有证据支持。"}
+{"question_id":"DEV_Q066","verdict":"不通过","reason":"列出的 CVE 集合与题目所指安全公告不一致，因而未回答该次 RHEL 漏洞行动要求。"}
+{"question_id":"DEV_Q067","verdict":"不通过","reason":"给出无关修复包，遗漏把 wimconfig.xml 的 connectTimeout 从 20 改为 0 并完整重启的方案。"}
+{"question_id":"DEV_Q068","verdict":"通过","reason":"正确解释栈空间不足并给出用 -Xss 增大线程栈的核心处理。"}
+{"question_id":"DEV_Q071","verdict":"通过","reason":"按 ITCAM 版本列出以有效 IP 替换主机名的配置项，并保留 NAT 和端口条件。"}
+{"question_id":"DEV_Q072","verdict":"不通过","reason":"只提供泛化公告链接，遗漏运行自有 Java 代码时需自行评估完整漏洞列表的关键条件。"}
+{"question_id":"DEV_Q074","verdict":"不通过","reason":"未提供 CVE-2015-1920 的远程代码执行机制、9.3 评分或具体修复信息。"}
+{"question_id":"DEV_Q077","verdict":"不通过","reason":"错误声称许可证不可转移并让用户联系 IBM，未按 GradPack 要求联系原销售商。"}
+{"question_id":"DEV_Q080","verdict":"不通过","reason":"未指出应使用完整值 INTEGER 或 FLOAT 而非 I/F，且对首个 token 的解释与证据不符。"}
+{"question_id":"DEV_Q082","verdict":"通过","reason":"准确说明明文凭据可被中间人读取、受影响版本、评分和修复方向。"}
+{"question_id":"DEV_Q088","verdict":"不通过","reason":"罗列连接和端口猜测，未识别安装时 cqreg initialize 未成功执行这一根因。"}
+{"question_id":"DEV_Q089","verdict":"通过","reason":"完整给出 ALERT 包处理导致拒绝服务、受影响版本、评分和升级到 5.0.6.2 的修复。"}
+{"question_id":"DEV_Q090","verdict":"通过","reason":"识别 RTW 8.5 offering 版本错误，并给出重新生成许可证及替换 offering/plugin 文件的受支持处理。"}
+{"question_id":"DEV_Q093","verdict":"不通过","reason":"只描述从安装向导运行扫描器，未给出 DASH 与 JazzSM 产品代码组合的实际扫描命令。"}
+{"question_id":"DEV_Q098","verdict":"通过","reason":"准确给出 CVE-2018-2633 的 JNDI 接管风险、评分和向量。"}
+{"question_id":"DEV_Q099","verdict":"通过","reason":"直接确认 7.2.0.0.7 可用且与保存的修复列表一致。"}
+{"question_id":"DEV_Q102","verdict":"通过","reason":"回答哈希开销可忽略，并说明仅在系统已达到磁盘输入上限时验证开销才可能显现。"}
+{"question_id":"DEV_Q106","verdict":"通过","reason":"正确指出 Retry Attempts=0 会无限重试并给出设置有限次数及间隔的解决办法。"}
+{"question_id":"DEV_Q108","verdict":"不通过","reason":"把已高于 J06.11 的 J06.14 错判为版本过低，并遗漏 H 系列所需 H06.23.01 维护级别。"}
+{"question_id":"DEV_Q109","verdict":"不通过","reason":"只指向公告且声称缺少详情，未说明非默认配置可无有效凭据认证的核心漏洞。"}
+{"question_id":"DEV_Q110","verdict":"不通过","reason":"建议重启数据库和泛化采集，遗漏立即调用数据源 MBean purgePoolContents immediate 的修复。"}
+{"question_id":"DEV_Q112","verdict":"通过","reason":"正确解释菜单引用了已不存在的工具，并给出重建工具后重新关联菜单的处理。"}
+{"question_id":"DEV_Q114","verdict":"通过","reason":"列出 LUW 与 z/OS 预编译、错误处理和 Micro Focus COBOL 的具体迁移差异，均来自上下文。"}
+{"question_id":"DEV_Q116","verdict":"通过","reason":"确认可以从 BPM 8.5 升级到 8.5.5，并说明所需修复和升级后任务。"}
+{"question_id":"DEV_Q119","verdict":"通过","reason":"正确把 Dataserver 变为 Vulnerable 归因于内存分配不足并给出检查路径。"}
+{"question_id":"DEV_Q120","verdict":"通过","reason":"准确指出 Standalone 模式新增 report.standalone.userid 配置并给出修改和重启步骤。"}
+{"question_id":"DEV_Q121","verdict":"通过","reason":"确认 IIB V10 有 Java 插件 Job Execution Node，可在消息流中执行系统命令和脚本。"}
+{"question_id":"DEV_Q122","verdict":"通过","reason":"完整给出 NEWORGID XML 字段及在对象结构非持久字段中启用它的步骤。"}
+{"question_id":"DEV_Q123","verdict":"通过","reason":"用 mqsichangeproperties 配置执行组的 resourceConfigFile，并包含重启和验证命令。"}
+{"question_id":"DEV_Q132","verdict":"不通过","reason":"把 ITCAM WAS 状态误解释为 VTAM 请求状态，未说明基线尚未开始或尚未计算。"}
+{"question_id":"DEV_Q134","verdict":"通过","reason":"正确识别传感器误报并给出重启设备以复位传感器的操作。"}
+{"question_id":"DEV_Q140","verdict":"通过","reason":"解释 HIGH2KEY/LOW2KEY 统计限制，并给出受证据支持的编辑统计值等规避方式。"}
+{"question_id":"DEV_Q141","verdict":"不通过","reason":"只泛称调整百分比，未给出 NormalizeCCO 前应添加的具体动作及可执行参数。"}
+{"question_id":"DEV_Q145","verdict":"不通过","reason":"引用错误 APAR 并把问题说成通用 Puma 缓存限制，未说明基条目与仓库名不同时的缺陷及对应修复包。"}
+{"question_id":"DEV_Q149","verdict":"不通过","reason":"回答转向无关产品的 SSH1 回退和 PuTTY，遗漏 7.5.2 禁用旧 DH 与 MD5 MAC 算法的变化。"}
+{"question_id":"DEV_Q153","verdict":"通过","reason":"虽然开头措辞含混，但明确要求 Match Designer 数据库不得使用 XMETA 数据库并建议独立数据库。"}
+{"question_id":"DEV_Q154","verdict":"通过","reason":"正确识别 USERPARAMETERS 长度导致复制截断，并要求所有集群节点设置上限后重启。"}
+{"question_id":"DEV_Q158","verdict":"通过","reason":"正确回答 TOKEN_SEPARATOR 无需引号，并说明空值及 TOKEN_TYPES 条件。"}
+{"question_id":"DEV_Q161","verdict":"不通过","reason":"错误建议调整轮询时间和新增字段，遗漏停止 EventReader、Clear State 后重启的直接修复。"}
+{"question_id":"DEV_Q162","verdict":"通过","reason":"确认随产品提供或依赖的 WAS 存在安全漏洞，并列出上下文中的相关公告和 CVE。"}
+{"question_id":"DEV_Q164","verdict":"不通过","reason":"回答转向性能和历史缺陷，未说明 SHARECNV 默认值、协商取较小值及 DataPower 将 1 当作 0 的特殊语义。"}
+{"question_id":"DEV_Q167","verdict":"不通过","reason":"重建脚本的目录写错为 etc/oracle，遗漏 release/<version>/oracle/create/schema 的关键路径。"}
+{"question_id":"DEV_Q171","verdict":"通过","reason":"给出删除 WP ScriptingService 对应自定义属性并重启的准确本地修复及累计修复方向。"}
+{"question_id":"DEV_Q174","verdict":"通过","reason":"说明 Web 薄客户端可用于远程场景，同时保留 Citrix 未认证、可能要求脱离 Citrix 复现的条件。"}
+{"question_id":"DEV_Q175","verdict":"通过","reason":"确认 eXtreme Scale 依赖的 Java SDK 支持闰年并解释合规依据。"}
+{"question_id":"DEV_Q176","verdict":"通过","reason":"确认 eXtreme Scale 依赖 Java SDK 的闰秒处理能力，并说明产品本身不单独测试。"}
+{"question_id":"DEV_Q181","verdict":"不通过","reason":"直接使用 today() 与证据中的 MSSQL getdate、DB2 CURRENT DATE、Oracle sysdate 条件不符。"}
+{"question_id":"DEV_Q182","verdict":"不通过","reason":"只罗列多个公告标题，没有回答指定 CVE 的敏感信息泄露机制和严重性。"}
+{"question_id":"DEV_Q183","verdict":"通过","reason":"直接给出 MTTrapd/SNMP Probe 支持指南的下载入口。"}
+{"question_id":"DEV_Q184","verdict":"通过","reason":"准确指出隐藏的重复连线导致多回复，并给出删除冗余连线的解决办法。"}
+{"question_id":"DEV_Q186","verdict":"通过","reason":"正确指出必须在 /sf 后提供响应文件完整路径，并给出符合安装器语法的示例。"}
+{"question_id":"DEV_Q187","verdict":"不通过","reason":"仅给出公告标题，未提供 CVE-2017-10115 的 JCE 敏感信息泄露影响和评分。"}
+{"question_id":"DEV_Q188","verdict":"通过","reason":"直接提供 CORBA Probes 支持指南的文档入口。"}
+{"question_id":"DEV_Q192","verdict":"通过","reason":"识别为已知缺陷并给出适用修复包和可用的 shareable-edit 规避步骤。"}
+{"question_id":"DEV_Q193","verdict":"不通过","reason":"未把证据中的 Nokia NFMP 17.3 probe 明确对应到客户设备，笼统得出无法确认两者的结论。"}
+{"question_id":"DEV_Q195","verdict":"通过","reason":"确认 TLS 1.2 可用并给出将 KBN_SOMA_PROTOCOL 改为 TLSv1.2 的关键配置。"}
+{"question_id":"DEV_Q196","verdict":"通过","reason":"正确覆盖重新传输、检查临时目录空间与权限以及用 MD5 校验下载文件。"}
+{"question_id":"DEV_Q201","verdict":"不通过","reason":"把问题关联到不同 APAR 和未来累计修复，遗漏应安装 JR50092。"}
+{"question_id":"DEV_Q202","verdict":"通过","reason":"最终给出 GUI 所需 GTK+ 及完整依赖 RPM 列表，也保留非 GUI 安装替代方案。"}
+{"question_id":"DEV_Q204","verdict":"不通过","reason":"推荐已较旧的 8.3.0.6，而证据给出的受支持稳定目标是 8.4.1.3。"}
+{"question_id":"DEV_Q206","verdict":"通过","reason":"正确解释菜单引用的工具已不存在，并给出重建或移除旧工具关联的处理。"}
+{"question_id":"DEV_Q208","verdict":"不通过","reason":"把 404 错判为缺失文件，遗漏为 JavaContentRepository 在 Portal 服务器启用 Auto Start。"}
+{"question_id":"DEV_Q209","verdict":"不通过","reason":"让用户回到 FEM 修改模板，未给出 ACCE 中打开 Property Definition 并保存类定义的步骤。"}
+{"question_id":"DEV_Q210","verdict":"通过","reason":"正确解释文件句柄和 socket 被耗尽、常见根因是泄漏，并给出 lsof/ulimit 排查方向。"}
+{"question_id":"DEV_Q211","verdict":"通过","reason":"给出 alter ql(SYSTEM.ADMIN.QMGR.EVENT) defpsist(YES) 的准确持久化命令及队列填满提醒。"}
+{"question_id":"DEV_Q213","verdict":"通过","reason":"说明 Workplace XT 搜索模板可在 ICN 使用但不能编辑，并保留结果类型限制。"}
+{"question_id":"DEV_Q215","verdict":"不通过","reason":"遗漏 SHARECNV 默认值和协商规则，主要讨论无关 APAR 与性能风险。"}
+{"question_id":"DEV_Q216","verdict":"通过","reason":"准确说明必须完整解压 ZIP 后从新目录运行 setup.exe。"}
+{"question_id":"DEV_Q218","verdict":"通过","reason":"解释维护级别未应用的原因并给出使用新版 maintenance.py 安装或迁移最新 MQ 维护级别。"}
+{"question_id":"DEV_Q220","verdict":"不通过","reason":"只提供修复下载和受影响版本，未说明 TLS CBC padding 可被中间人利用来解密信息的核心漏洞。"}
+{"question_id":"DEV_Q221","verdict":"不通过","reason":"转向 Java 版本和日志排查，遗漏用 CastIronStudio.exe -J-Xmx1024m 增加 Studio 堆的直接方案。"}
+{"question_id":"DEV_Q224","verdict":"通过","reason":"完整给出解包 PolicyAtlas.ear、修改 weblogic.xml 三项 cookie 配置并重新部署的步骤。"}
+{"question_id":"DEV_Q225","verdict":"通过","reason":"准确指出用户目录缺少与 PumaStoreService 过滤属性匹配的后端属性。"}
+{"question_id":"DEV_Q229","verdict":"通过","reason":"给出在 presentation XML 添加 systemnav=false、重新导入并保存的准确做法。"}
+{"question_id":"DEV_Q230","verdict":"通过","reason":"正确说明持久会话或 PMI 要求 HttpSession 对象可序列化，并给出实现 Serializable 或禁用相关功能的选择。"}
+{"question_id":"DEV_Q234","verdict":"通过","reason":"识别非 root 安装用户的目录写权限问题，并给出检查权限和相关错误日志的处理。"}
+{"question_id":"DEV_Q235","verdict":"不通过","reason":"只给出修复包版本，遗漏 Networking 组件漏洞的低完整性影响和适用条件。"}
+{"question_id":"DEV_Q239","verdict":"不通过","reason":"主要套用 RFT 8.5 Citrix 权限问题，未明确删除本题 RFT 8.2 对应的用户 .eclipse 缓存目录。"}
+{"question_id":"DEV_Q242","verdict":"通过","reason":"正确推荐 bpmdc 数据收集器并给出收集配置、日志和上传 PMR 的命令示例。"}
+{"question_id":"DEV_Q243","verdict":"不通过","reason":"回答讨论 OCCURS DEPENDING ON 格式，未覆盖升级时文件未正确覆盖导致字段缺失的实际问题。"}
+{"question_id":"DEV_Q244","verdict":"通过","reason":"给出 crm_resource -r <resource> -H <host> -C 清理失败资源动作的受支持方案。"}
+{"question_id":"DEV_Q245","verdict":"通过","reason":"准确要求把 xml4c 库加入 LIBPATH，并给出 z/OS 环境变量示例。"}
+{"question_id":"DEV_Q249","verdict":"通过","reason":"说明管理命令可触发非法内存访问和队列管理器无响应，并给出受影响版本和维护级别。"}
+{"question_id":"DEV_Q253","verdict":"不通过","reason":"错误结论为 Edge 不受 ICC 支持，证据结论是从 ICC 4.0.1 Fix Pack 2 起支持。"}
+{"question_id":"DEV_Q254","verdict":"通过","reason":"正确解释缺少 FEK.CMD.SEND 与 FEK.CMD.SEND.CLEAR FACILITY 定义并给出修复方向。"}
+{"question_id":"DEV_Q257","verdict":"通过","reason":"准确建议每天调度 kd4TrimDB2db，仅保留最近 24 小时数据。"}
+{"question_id":"DEV_Q258","verdict":"不通过","reason":"给出权限和采集失败等泛化原因，未说明 Unknown 表示应用基线尚未开始或未计算。"}
+{"question_id":"DEV_Q260","verdict":"通过","reason":"正确说明修复隐藏 HttpComponents API 后应用需自带 HTTPCore/HTTPClient 库。"}
+{"question_id":"DEV_Q261","verdict":"不通过","reason":"引用旧 Puma APAR，未识别 base entry 与 repository name 不同导致 clearEntity 仍命中 VMM 缓存。"}
+{"question_id":"DEV_Q262","verdict":"不通过","reason":"只笼统归因于特殊字符，未说明 CLP 插入绕过代码页转换导致数据库中产生非 Unicode codepoint。"}
+{"question_id":"DEV_Q263","verdict":"通过","reason":"给出 2.1.0.1+ 的 System Health Check 路径、自助检查频率及事件转发和 call-home 建议。"}
+{"question_id":"DEV_Q266","verdict":"通过","reason":"正确使用 Installation Manager 添加 Packaging Utility 仓库并安装或更新。"}
+{"question_id":"DEV_Q267","verdict":"不通过","reason":"错误表示 Architect 浮动许可证本身可启用 Reporter，遗漏需要 Tools & Utilities Add-on 许可。"}
+{"question_id":"DEV_Q268","verdict":"不通过","reason":"建议 8.5.5.13 且引用不同问题，未给出该 APAR 目标修复包 8.5.5.9。"}
+{"question_id":"DEV_Q271","verdict":"不通过","reason":"只泛称需配置 Postal 数据库，遗漏数据盘 105 天失效及应定期从 Passport Advantage 获取刷新数据。"}
+{"question_id":"DEV_Q275","verdict":"不通过","reason":"提供数据库 SQL 查询而非 JP 表中启用 DESCRIPTION_LONGDESCRIPTION 字段的配置，未解决用户工作表需求。"}
+{"question_id":"DEV_Q277","verdict":"不通过","reason":"把 8.5 CF8 的瞬态用户支持误说成适用于 Portal 8.0，产品版本条件错误。"}
+{"question_id":"DEV_Q279","verdict":"通过","reason":"准确说明 LOAD 内部提交与 XA 不兼容，会返回 SQL30090N 且当前无规避办法。"}
+{"question_id":"DEV_Q281","verdict":"通过","reason":"正确指出配置中仍有必填字段为空，并说明需检查的配置页。"}
+{"question_id":"DEV_Q282","verdict":"通过","reason":"确认 ServiceNow Geneva 受支持，并说明网关已适配 Eureka/Fiji 到 Geneva 的 REST API 变化。"}
+{"question_id":"DEV_Q283","verdict":"不通过","reason":"给出通用商业许可证流程并联系 IBM，未按学生版或 GradPack 要求联系销售商。"}
+{"question_id":"DEV_Q287","verdict":"不通过","reason":"把设计上的 SSH 远程登录限制改成启用 PermitRootLogin，属于未经证据支持且不安全的操作。"}
+{"question_id":"DEV_Q288","verdict":"不通过","reason":"虽正确说 8.5.6 不支持 Java 8，却错误声称升级到 8.5.7 即可；实际需 8.6。"}
+{"question_id":"DEV_Q291","verdict":"通过","reason":"按版本区分 8.5.6/8.5.7 仅支持 Java 6/7，而 BPM 8.6 支持 Java 8。"}
+{"question_id":"DEV_Q292","verdict":"不通过","reason":"错误归因为 Health Servlet 代码缺陷，遗漏给 Bootstrap User 在对象库及所有存储区授予 Full Control。"}
+{"question_id":"DEV_Q296","verdict":"不通过","reason":"未给出安装 FileNet CM addon 时只保留一个 pureScale member 活跃、完成后再恢复其他成员的解决办法。"}
+{"question_id":"DEV_Q298","verdict":"通过","reason":"确认 Arabic 支持并保留需另购安装 NovoDynamics NovoVerus、在 Rulerunner 运行相应动作的条件。"}
+{"question_id":"DEV_Q299","verdict":"通过","reason":"准确给出先把结果字段赋给局部变量再传入自定义函数的代码修复。"}
+{"question_id":"DEV_Q300","verdict":"通过","reason":"正确区分 9.5 空间可在同一表空间复用但不能返还 OS，以及 9.7+ 新建表空间的 reclaimable storage。"}
+{"question_id":"DEV_Q302","verdict":"通过","reason":"完整说明 crypto-export、exportable 标记、共享密钥包装键和硬件兼容性限制。"}
+{"question_id":"DEV_Q304","verdict":"通过","reason":"明确 CONNECT 仅在 Multi-Protocol Gateway 的 User Agent HTTP Proxy Policy 中用于 SSL 隧道。"}
+{"question_id":"DEV_Q305","verdict":"不通过","reason":"给出复制 explore 目录等其他场景方案，遗漏 IIS 中为 Cognos 根目录和图片目录启用匿名访问。"}
+{"question_id":"DEV_Q306","verdict":"通过","reason":"给出 apps.ini 的 BatchLimit 配置、版本前置条件和性能影响，可解决列表截断导致看不到后续批次。"}
+{"question_id":"DEV_Q307","verdict":"不通过","reason":"只列出 MQ 5.3.1.0 至 5.3.1.12，遗漏同样受影响的 MQ 8 for HPE NonStop Server。"}

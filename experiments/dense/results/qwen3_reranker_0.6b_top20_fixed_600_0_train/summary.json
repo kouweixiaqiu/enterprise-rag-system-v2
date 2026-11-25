@@ -1,0 +1,67 @@
+{
+  "all_rank_21_50_orders_unchanged": true,
+  "all_scores_valid": true,
+  "all_top_20_document_sets_unchanged": true,
+  "batch_size": 4,
+  "candidate_documents_per_query": 50,
+  "evaluation_split": "TRAIN only",
+  "experiment_wall_seconds": 491.6981443570003,
+  "instruction": "Given a web search query, retrieve relevant passages that answer the query",
+  "longest_input_tokens": 1365,
+  "max_length": 2048,
+  "metrics": {
+    "bge_top_20": {
+      "hits_at_5": 285,
+      "mrr_at_10": 0.5194303350970018,
+      "query_count": 450,
+      "recall_at_5": 0.6333333333333333
+    },
+    "pplx_baseline": {
+      "hits_at_5": 335,
+      "mrr_at_10": 0.6395802469135803,
+      "query_count": 450,
+      "recall_at_5": 0.7444444444444445
+    },
+    "qwen_top_20": {
+      "hits_at_5": 306,
+      "mrr_at_10": 0.6022980599647266,
+      "query_count": 450,
+      "recall_at_5": 0.68
+    }
+  },
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "model_load_seconds": 3.3796185749997676,
+  "model_snapshot": "/home/fuxuanyi/.cache/huggingface/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "pair_count": 9000,
+  "peak_gpu_memory_allocated_gib": 4.7451629638671875,
+  "peak_gpu_memory_reserved_gib": 12.916015625,
+  "pplx_335_of_450_confirmed": true,
+  "query_count": 450,
+  "qwen_scoring_seconds": 487.6531241970006,
+  "qwen_vs_pplx_top_5": {
+    "dropped_out_of_top_5": 40,
+    "net_change": -29,
+    "new_into_top_5": 11
+  },
+  "rerank_timing": {
+    "bge_top_20": {
+      "mean_seconds_per_query": 0.30236119749552826,
+      "p95_seconds_per_query": 0.46614645900081086,
+      "total_seconds": 136.06253887298772
+    },
+    "pplx_baseline": {
+      "mean_seconds_per_query": 0.0,
+      "note": "no reranking",
+      "p95_seconds_per_query": 0.0
+    },
+    "qwen_top_20": {
+      "mean_seconds_per_query": 1.0832308502843322,
+      "p95_seconds_per_query": 1.315189797001949,
+      "total_seconds": 487.4538826279495
+    }
+  },
+  "reranked_documents_per_query": 20,
+  "revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "score_method": "softmax(no_logit, yes_logit)[yes]",
+  "status": "complete"
+}

@@ -1,0 +1,35 @@
+{
+  "chunk_config": {
+    "name": "paragraph_merge_600_0",
+    "overlap": 0,
+    "size": 600,
+    "step": 600,
+    "strategy": "paragraph_merge"
+  },
+  "details": {
+    "cache_reused": false,
+    "dense_cache": "data/processed/techqa/dense_cache/bge-small-en-v1.5_paragraph_merge_600_0",
+    "document_encoding_seconds": 948.1407316870027,
+    "document_truncated_count": 17,
+    "model": "BAAI/bge-small-en-v1.5",
+    "model_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "query_encoding_seconds_shared": 2.301984776997415,
+    "query_instruction": null,
+    "query_truncated_count": 1
+  },
+  "elapsed_seconds": 2.259168281001621,
+  "evaluation_split": "TRAIN",
+  "mrr_at_10": 0.5581331569664904,
+  "query_count": 450,
+  "rankings": "experiments/matrix/results/train/paragraph_merge_600_0/dense/rankings_top50.jsonl",
+  "rankings_sha256": "b9d2e2652257e7e5db251fe024025124647ea1ff024f60999e4b098353b4a8c8",
+  "recall_at_1": 0.4911111111111111,
+  "recall_at_10": 0.7088888888888889,
+  "recall_at_20": 0.7533333333333333,
+  "recall_at_5": 0.6577777777777778,
+  "recall_at_50": 0.8355555555555556,
+  "retriever": "dense",
+  "run_signature": "3af55b001e6553446192e42849983c5f85ba0550a405958c877b3a63a6ee6dcb",
+  "status": "complete",
+  "top_k_saved": 50
+}

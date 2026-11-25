@@ -1,0 +1,30 @@
+{
+  "variant": "balanced",
+  "total": 72,
+  "by_split": {
+    "tune": {
+      "case_count": 48,
+      "no_answer_correct_refusal": 18,
+      "no_answer_incorrect_answer": 6,
+      "answerable_answered": 16,
+      "answerable_false_refusal": 8,
+      "invalid_format": 0
+    },
+    "holdout": {
+      "case_count": 24,
+      "no_answer_correct_refusal": 12,
+      "no_answer_incorrect_answer": 0,
+      "answerable_answered": 8,
+      "answerable_false_refusal": 4,
+      "invalid_format": 0
+    },
+    "all": {
+      "case_count": 72,
+      "no_answer_correct_refusal": 30,
+      "no_answer_incorrect_answer": 6,
+      "answerable_answered": 24,
+      "answerable_false_refusal": 12,
+      "invalid_format": 0
+    }
+  }
+}

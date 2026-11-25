@@ -1,0 +1,142 @@
+{
+  "reviewer": "Codex",
+  "groups": {
+    "A": {
+      "original_prompt_v2_pass": 12,
+      "regenerated_prompt_v2_pass": 13,
+      "new_pass": 3,
+      "new_pass_question_ids": [
+        "TRAIN_Q064",
+        "TRAIN_Q127",
+        "TRAIN_Q482"
+      ],
+      "regressed": 2,
+      "regressed_question_ids": [
+        "TRAIN_Q144",
+        "TRAIN_Q402"
+      ],
+      "net": 1
+    },
+    "B": {
+      "original_prompt_v2_pass": 14,
+      "regenerated_prompt_v2_pass": 16,
+      "new_pass": 5,
+      "new_pass_question_ids": [
+        "TRAIN_Q064",
+        "TRAIN_Q127",
+        "TRAIN_Q140",
+        "TRAIN_Q154",
+        "TRAIN_Q482"
+      ],
+      "regressed": 3,
+      "regressed_question_ids": [
+        "TRAIN_Q014",
+        "TRAIN_Q144",
+        "TRAIN_Q402"
+      ],
+      "net": 2
+    },
+    "C": {
+      "original_prompt_v2_pass": 13,
+      "regenerated_prompt_v2_pass": 15,
+      "new_pass": 5,
+      "new_pass_question_ids": [
+        "TRAIN_Q089",
+        "TRAIN_Q154",
+        "TRAIN_Q294",
+        "TRAIN_Q402",
+        "TRAIN_Q482"
+      ],
+      "regressed": 3,
+      "regressed_question_ids": [
+        "TRAIN_Q054",
+        "TRAIN_Q144",
+        "TRAIN_Q494"
+      ],
+      "net": 2
+    }
+  },
+  "vs_scope_checked": {
+    "A": {
+      "scope_checked_pass": 10,
+      "regenerated_prompt_v2_pass": 13,
+      "prompt_v2_only_pass": [
+        "TRAIN_Q018",
+        "TRAIN_Q064",
+        "TRAIN_Q127"
+      ],
+      "scope_checked_only_pass": [],
+      "net": 3
+    },
+    "B": {
+      "scope_checked_pass": 13,
+      "regenerated_prompt_v2_pass": 16,
+      "prompt_v2_only_pass": [
+        "TRAIN_Q018",
+        "TRAIN_Q054",
+        "TRAIN_Q386",
+        "TRAIN_Q482"
+      ],
+      "scope_checked_only_pass": [
+        "TRAIN_Q014"
+      ],
+      "net": 3
+    },
+    "C": {
+      "scope_checked_pass": 13,
+      "regenerated_prompt_v2_pass": 15,
+      "prompt_v2_only_pass": [
+        "TRAIN_Q154",
+        "TRAIN_Q188",
+        "TRAIN_Q482"
+      ],
+      "scope_checked_only_pass": [
+        "TRAIN_Q054"
+      ],
+      "net": 2
+    }
+  },
+  "complete_evidence_old_failures": {
+    "A": {
+      "eligible": 6,
+      "rescued": 2,
+      "question_ids": [
+        "TRAIN_Q064",
+        "TRAIN_Q127"
+      ]
+    },
+    "B": {
+      "eligible": 9,
+      "rescued": 5,
+      "question_ids": [
+        "TRAIN_Q064",
+        "TRAIN_Q127",
+        "TRAIN_Q140",
+        "TRAIN_Q154",
+        "TRAIN_Q482"
+      ]
+    },
+    "C": {
+      "eligible": 7,
+      "rescued": 4,
+      "question_ids": [
+        "TRAIN_Q089",
+        "TRAIN_Q154",
+        "TRAIN_Q294",
+        "TRAIN_Q402"
+      ]
+    },
+    "total": {
+      "eligible": 22,
+      "rescued": 11
+    }
+  },
+  "input_alignment": {
+    "matched_question_chain_pairs": 90,
+    "same_top5_document_chunk_order": true,
+    "prompt_template": "configs/generation/answer_with_citations_direct_conditions.prompt",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "temperature": 0,
+    "max_tokens": 512
+  }
+}

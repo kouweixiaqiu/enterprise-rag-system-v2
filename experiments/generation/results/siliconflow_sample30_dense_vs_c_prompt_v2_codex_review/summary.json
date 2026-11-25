@@ -1,0 +1,66 @@
+{
+  "reviewer": "Codex",
+  "question_count": 30,
+  "question_ids_match": true,
+  "dense": {
+    "complete_pass": 17,
+    "rate": 0.5666666666666667
+  },
+  "c": {
+    "complete_pass": 15,
+    "rate": 0.5
+  },
+  "paired": {
+    "dense_only": 5,
+    "dense_only_question_ids": [
+      "TRAIN_Q064",
+      "TRAIN_Q127",
+      "TRAIN_Q144",
+      "TRAIN_Q462",
+      "TRAIN_Q494"
+    ],
+    "c_only": 3,
+    "c_only_question_ids": [
+      "TRAIN_Q014",
+      "TRAIN_Q089",
+      "TRAIN_Q154"
+    ],
+    "both_pass": 12,
+    "both_pass_question_ids": [
+      "TRAIN_Q015",
+      "TRAIN_Q018",
+      "TRAIN_Q069",
+      "TRAIN_Q140",
+      "TRAIN_Q162",
+      "TRAIN_Q188",
+      "TRAIN_Q294",
+      "TRAIN_Q350",
+      "TRAIN_Q386",
+      "TRAIN_Q402",
+      "TRAIN_Q446",
+      "TRAIN_Q482"
+    ],
+    "neither_pass": 10,
+    "neither_pass_question_ids": [
+      "TRAIN_Q017",
+      "TRAIN_Q054",
+      "TRAIN_Q058",
+      "TRAIN_Q139",
+      "TRAIN_Q288",
+      "TRAIN_Q375",
+      "TRAIN_Q415",
+      "TRAIN_Q441",
+      "TRAIN_Q511",
+      "TRAIN_Q513"
+    ]
+  },
+  "dense_configuration": {
+    "chunk_config": "fixed_600_0",
+    "ranking": "PPLX Dense original Top-5",
+    "context_mode": "representative_with_neighbors",
+    "prompt": "configs/generation/answer_with_citations_direct_conditions.prompt",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "temperature": 0,
+    "max_tokens": 512
+  }
+}

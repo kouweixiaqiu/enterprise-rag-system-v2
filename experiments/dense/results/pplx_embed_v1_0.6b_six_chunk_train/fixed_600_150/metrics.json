@@ -1,0 +1,46 @@
+{
+  "status": "complete",
+  "evaluation_split": "TRAIN only",
+  "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+  "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+  "query_instruction": null,
+  "chunk_config": {
+    "name": "fixed_600_150",
+    "strategy": "fixed",
+    "size": 600,
+    "overlap": 150
+  },
+  "document_count": 28482,
+  "chunk_count": 229636,
+  "top_k": 100,
+  "tie_break": "score descending, then document_id ascending",
+  "document_score": "maximum normalized query/chunk dot product",
+  "metrics": {
+    "query_count": 450,
+    "hits_at_1": 256,
+    "recall_at_1": 0.5688888888888889,
+    "hits_at_5": 332,
+    "recall_at_5": 0.7377777777777778,
+    "hits_at_10": 357,
+    "recall_at_10": 0.7933333333333333,
+    "hits_at_20": 370,
+    "recall_at_20": 0.8222222222222222,
+    "hits_at_50": 394,
+    "recall_at_50": 0.8755555555555555,
+    "hits_at_100": 417,
+    "recall_at_100": 0.9266666666666666,
+    "mrr_at_10": 0.6389144620811288
+  },
+  "retrieval_seconds": 0.0,
+  "encoding": {
+    "reused": true,
+    "rankings_only": true
+  },
+  "reused_rankings_from": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_600_150/dense_rankings_top100.jsonl",
+  "artifacts": {
+    "rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_600_150/dense_rankings_top100.jsonl",
+    "document_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_150/embeddings.npy",
+    "query_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_train_queries_no_instruction/embeddings.npy",
+    "chunk_metadata": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_150/chunk_metadata.jsonl"
+  }
+}

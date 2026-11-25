@@ -1,0 +1,29 @@
+{
+  "chunk_config": {
+    "name": "fixed_600_0",
+    "overlap": 0,
+    "size": 600,
+    "step": 600,
+    "strategy": "fixed"
+  },
+  "details": {
+    "query_instruction": null,
+    "reused_rankings": "experiments/hybrid/results/fixed_600_0/dense_top100.jsonl",
+    "source_sha256": "bd02d651a9306ad3cf7adb094a14711ffd345d6071689c792ec8b6b92073d325"
+  },
+  "elapsed_seconds": 0.059901583001192193,
+  "evaluation_split": "TRAIN",
+  "mrr_at_10": 0.5330573192239859,
+  "query_count": 450,
+  "rankings": "experiments/matrix/results/train/fixed_600_0/dense/rankings_top50.jsonl",
+  "rankings_sha256": "21f8d319e12b203a626ee4afa894e3b554bc6a43878b474d2a30c5fc25f912cd",
+  "recall_at_1": 0.45111111111111113,
+  "recall_at_10": 0.6933333333333334,
+  "recall_at_20": 0.76,
+  "recall_at_5": 0.6444444444444445,
+  "recall_at_50": 0.8555555555555555,
+  "retriever": "dense",
+  "run_signature": "f8eeaaf2518e29b8450054087b6993fa8a01cbc4d0cd3d480b4ca147d0d8d2af",
+  "status": "complete",
+  "top_k_saved": 50
+}

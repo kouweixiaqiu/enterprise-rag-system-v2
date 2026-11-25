@@ -1,0 +1,198 @@
+#!/usr/bin/env python3
+"""Generate prompt-v3 answers for the fixed seed-42 TRAIN sample."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import sys
+from pathlib import Path
+from typing import Any, Iterable
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from scripts.generate_train_q000_siliconflow import (  # noqa: E402
+    MAX_TOKENS,
+    MODEL,
+    TEMPERATURE,
+    request_answer,
+)
+from scripts.run_train_context_window_ablation import (  # noqa: E402
+    SAMPLE_SIZE,
+    load_gold_after_generation,
+    load_inputs,
+    render_prompt,
+)
+
+
+TEMPLATE = (
+    PROJECT_ROOT
+    / "configs/generation/answer_with_citations_direct_conditions_v3.prompt"
+)
+V2_GENERATIONS = (
+    PROJECT_ROOT
+    / "experiments/generation/results/"
+    "siliconflow_train_context_window_prompt_v2_seed42_20/generations.jsonl"
+)
+OUTPUT_DIR = (
+    PROJECT_ROOT
+    / "experiments/generation/results/"
+    "siliconflow_train_context_window_prompt_v3_seed42_20"
+)
+GENERATIONS = OUTPUT_DIR / "generations.jsonl"
+SIDE_BY_SIDE = OUTPUT_DIR / "v2_v3_side_by_side.jsonl"
+MANIFEST = OUTPUT_DIR / "manifest.json"
+VARIANT = "representative_with_neighbors"
+
+
+def jsonl_rows(path: Path):
+    with path.open(encoding="utf-8") as stream:
+        for line in stream:
+            if line.strip():
+                yield json.loads(line)
+
+
+def atomic_text(path: Path, value: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(f".{path.name}.tmp")
+    temporary.write_text(value, encoding="utf-8")
+    os.replace(temporary, path)
+
+
+def atomic_json(path: Path, value: Any) -> None:
+    atomic_text(
+        path,
+        json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+    )
+
+
+def atomic_jsonl(path: Path, rows: Iterable[dict[str, Any]]) -> None:
+    atomic_text(
+        path,
+        "\n".join(
+            json.dumps(row, ensure_ascii=False, separators=(",", ":"))
+            for row in rows
+        )
+        + "\n",
+    )
+
+
+def main() -> int:
+    api_key = os.environ.get("SILICONFLOW_API_KEY", "").strip()
+    if not api_key:
+        print("SILICONFLOW_API_KEY is not set or is empty.", file=sys.stderr)
+        return 2
+    template = TEMPLATE.read_text(encoding="utf-8")
+    if template.count("{{question}}") != 1 or template.count("{{evidence}}") != 1:
+        raise ValueError("generation template must contain exactly two placeholders")
+
+    sample, rankings, documents = load_inputs()
+    v2_rows = list(jsonl_rows(V2_GENERATIONS))
+    v2 = {row["question_id"]: row for row in v2_rows}
+    sample_ids = [query["question_id"] for query in sample]
+    if len(v2_rows) != SAMPLE_SIZE or set(v2) != set(sample_ids):
+        raise ValueError("v2 results do not match the fixed seed-42 sample")
+    prompt_sha256 = hashlib.sha256(template.encode("utf-8")).hexdigest()
+
+    existing: dict[str, dict[str, Any]] = {}
+    if GENERATIONS.is_file():
+        for row in jsonl_rows(GENERATIONS):
+            question_id = row.get("question_id")
+            if (
+                question_id not in sample_ids
+                or question_id in existing
+                or row.get("variant") != VARIANT
+                or row.get("model") != MODEL
+                or row.get("temperature") != TEMPERATURE
+                or row.get("max_tokens") != MAX_TOKENS
+                or row.get("prompt_sha256") != prompt_sha256
+            ):
+                raise ValueError("existing prompt-v3 checkpoint is incompatible")
+            existing[question_id] = row
+
+    completed: list[dict[str, Any]] = []
+    for query in sample:
+        question_id = query["question_id"]
+        prompt, sources = render_prompt(
+            template,
+            query,
+            rankings[question_id],
+            documents,
+            VARIANT,
+        )
+        if sources != v2[question_id]["sources"]:
+            raise ValueError(f"v2/v3 evidence changed for {question_id}")
+        if question_id in existing:
+            completed.append(existing[question_id])
+            print(f"reused {len(completed)}/{SAMPLE_SIZE}: {question_id}", flush=True)
+            continue
+        try:
+            answer = request_answer(api_key, prompt, timeout=300)
+        except RuntimeError as exc:
+            print(f"Stopped at {question_id}: {exc}", file=sys.stderr)
+            return 1
+        completed.append(
+            {
+                "question_id": question_id,
+                "variant": VARIANT,
+                "model": MODEL,
+                "temperature": TEMPERATURE,
+                "max_tokens": MAX_TOKENS,
+                "prompt_sha256": prompt_sha256,
+                "answer": answer,
+                "sources": sources,
+            }
+        )
+        atomic_jsonl(GENERATIONS, completed)
+        print(f"completed {len(completed)}/{SAMPLE_SIZE}: {question_id}", flush=True)
+
+    gold = load_gold_after_generation(set(sample_ids))
+    for row in completed:
+        row["gold_answer"] = gold[row["question_id"]]
+    atomic_jsonl(GENERATIONS, completed)
+    v3 = {row["question_id"]: row for row in completed}
+    atomic_jsonl(
+        SIDE_BY_SIDE,
+        (
+            {
+                "question_id": question_id,
+                "gold_answer": gold[question_id],
+                "v2_answer": v2[question_id]["answer"],
+                "v3_answer": v3[question_id]["answer"],
+                "sources": v3[question_id]["sources"],
+            }
+            for question_id in sample_ids
+        ),
+    )
+    atomic_json(
+        MANIFEST,
+        {
+            "status": "generated_pending_human_review",
+            "evaluation_split": "TRAIN only",
+            "seed": 42,
+            "sample_size": SAMPLE_SIZE,
+            "question_ids": sample_ids,
+            "model": MODEL,
+            "temperature": TEMPERATURE,
+            "max_tokens": MAX_TOKENS,
+            "prompt_sha256": prompt_sha256,
+            "prompt_template": str(TEMPLATE.relative_to(PROJECT_ROOT)),
+            "retriever": "PPLX fixed_600_0 original Top-5",
+            "variant": VARIANT,
+            "v2_baseline_passed": 9,
+            "requests_completed": len(completed),
+            "generation_file": str(GENERATIONS.relative_to(PROJECT_ROOT)),
+            "side_by_side_file": str(SIDE_BY_SIDE.relative_to(PROJECT_ROOT)),
+        },
+    )
+    print(f"generations={GENERATIONS}", flush=True)
+    print(f"side_by_side={SIDE_BY_SIDE}", flush=True)
+    print(f"manifest={MANIFEST}", flush=True)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

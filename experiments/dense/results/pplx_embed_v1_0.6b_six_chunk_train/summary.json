@@ -1,0 +1,313 @@
+{
+  "status": "complete",
+  "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+  "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+  "evaluation_split": "TRAIN only",
+  "query_count": 450,
+  "requested_configs": [
+    "fixed_600_0",
+    "fixed_600_150",
+    "fixed_1200_0",
+    "fixed_1200_300",
+    "paragraph_merge_600_0",
+    "paragraph_merge_1200_0"
+  ],
+  "completed_configs": [
+    "fixed_600_0",
+    "fixed_600_150",
+    "fixed_1200_0",
+    "fixed_1200_300",
+    "paragraph_merge_600_0",
+    "paragraph_merge_1200_0"
+  ],
+  "results": [
+    {
+      "status": "complete",
+      "evaluation_split": "TRAIN only",
+      "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+      "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+      "query_instruction": null,
+      "chunk_config": {
+        "name": "fixed_600_0",
+        "strategy": "fixed",
+        "size": 600,
+        "overlap": 0
+      },
+      "document_count": 28482,
+      "chunk_count": 182835,
+      "top_k": 100,
+      "tie_break": "score descending, then document_id ascending",
+      "document_score": "maximum normalized query/chunk dot product",
+      "metrics": {
+        "query_count": 450,
+        "hits_at_1": 254,
+        "recall_at_1": 0.5644444444444444,
+        "hits_at_5": 335,
+        "recall_at_5": 0.7444444444444445,
+        "hits_at_10": 359,
+        "recall_at_10": 0.7977777777777778,
+        "hits_at_20": 376,
+        "recall_at_20": 0.8355555555555556,
+        "hits_at_50": 400,
+        "recall_at_50": 0.8888888888888888,
+        "hits_at_100": 414,
+        "recall_at_100": 0.92,
+        "mrr_at_10": 0.6395802469135803
+      },
+      "retrieval_seconds": 0.0,
+      "encoding": {
+        "reused": true,
+        "rankings_only": true
+      },
+      "reused_rankings_from": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_600_0/dense_rankings_top100.jsonl",
+      "artifacts": {
+        "rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_600_0/dense_rankings_top100.jsonl",
+        "document_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_0/embeddings.npy",
+        "query_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_train_queries_no_instruction/embeddings.npy",
+        "chunk_metadata": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_0/chunk_metadata.jsonl"
+      }
+    },
+    {
+      "status": "complete",
+      "evaluation_split": "TRAIN only",
+      "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+      "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+      "query_instruction": null,
+      "chunk_config": {
+        "name": "fixed_600_150",
+        "strategy": "fixed",
+        "size": 600,
+        "overlap": 150
+      },
+      "document_count": 28482,
+      "chunk_count": 229636,
+      "top_k": 100,
+      "tie_break": "score descending, then document_id ascending",
+      "document_score": "maximum normalized query/chunk dot product",
+      "metrics": {
+        "query_count": 450,
+        "hits_at_1": 256,
+        "recall_at_1": 0.5688888888888889,
+        "hits_at_5": 332,
+        "recall_at_5": 0.7377777777777778,
+        "hits_at_10": 357,
+        "recall_at_10": 0.7933333333333333,
+        "hits_at_20": 370,
+        "recall_at_20": 0.8222222222222222,
+        "hits_at_50": 394,
+        "recall_at_50": 0.8755555555555555,
+        "hits_at_100": 417,
+        "recall_at_100": 0.9266666666666666,
+        "mrr_at_10": 0.6389144620811288
+      },
+      "retrieval_seconds": 0.0,
+      "encoding": {
+        "reused": true,
+        "rankings_only": true
+      },
+      "reused_rankings_from": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_600_150/dense_rankings_top100.jsonl",
+      "artifacts": {
+        "rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_600_150/dense_rankings_top100.jsonl",
+        "document_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_150/embeddings.npy",
+        "query_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_train_queries_no_instruction/embeddings.npy",
+        "chunk_metadata": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_600_150/chunk_metadata.jsonl"
+      }
+    },
+    {
+      "status": "complete",
+      "evaluation_split": "TRAIN only",
+      "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+      "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+      "query_instruction": null,
+      "chunk_config": {
+        "name": "fixed_1200_0",
+        "strategy": "fixed",
+        "size": 1200,
+        "overlap": 0
+      },
+      "document_count": 28482,
+      "chunk_count": 98490,
+      "top_k": 100,
+      "tie_break": "score descending, then document_id ascending",
+      "document_score": "maximum normalized query/chunk dot product",
+      "metrics": {
+        "query_count": 450,
+        "hits_at_1": 258,
+        "recall_at_1": 0.5733333333333334,
+        "hits_at_5": 330,
+        "recall_at_5": 0.7333333333333333,
+        "hits_at_10": 354,
+        "recall_at_10": 0.7866666666666666,
+        "hits_at_20": 372,
+        "recall_at_20": 0.8266666666666667,
+        "hits_at_50": 400,
+        "recall_at_50": 0.8888888888888888,
+        "hits_at_100": 414,
+        "recall_at_100": 0.92,
+        "mrr_at_10": 0.6399329805996472
+      },
+      "retrieval_seconds": 2.5975632299960125,
+      "encoding": {
+        "reused": false,
+        "document_encoding_seconds": 14864.33235740615,
+        "document_encoding_wall_seconds": 14868.989163156017,
+        "chunks_per_second": 6.625928271236978,
+        "peak_gpu_memory_allocated_gib": 3.2035417556762695,
+        "peak_gpu_memory_reserved_gib": 7.318359375
+      },
+      "reused_rankings_from": null,
+      "artifacts": {
+        "rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_1200_0/dense_rankings_top100.jsonl",
+        "document_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_1200_0/embeddings.npy",
+        "query_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_train_queries_no_instruction/embeddings.npy",
+        "chunk_metadata": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_1200_0/chunk_metadata.jsonl"
+      }
+    },
+    {
+      "status": "complete",
+      "evaluation_split": "TRAIN only",
+      "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+      "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+      "query_instruction": null,
+      "chunk_config": {
+        "name": "fixed_1200_300",
+        "strategy": "fixed",
+        "size": 1200,
+        "overlap": 300
+      },
+      "document_count": 28482,
+      "chunk_count": 117259,
+      "top_k": 100,
+      "tie_break": "score descending, then document_id ascending",
+      "document_score": "maximum normalized query/chunk dot product",
+      "metrics": {
+        "query_count": 450,
+        "hits_at_1": 252,
+        "recall_at_1": 0.56,
+        "hits_at_5": 330,
+        "recall_at_5": 0.7333333333333333,
+        "hits_at_10": 350,
+        "recall_at_10": 0.7777777777777778,
+        "hits_at_20": 375,
+        "recall_at_20": 0.8333333333333334,
+        "hits_at_50": 399,
+        "recall_at_50": 0.8866666666666667,
+        "hits_at_100": 414,
+        "recall_at_100": 0.92,
+        "mrr_at_10": 0.6304559082892417
+      },
+      "retrieval_seconds": 0.0,
+      "encoding": {
+        "reused": true,
+        "rankings_only": true
+      },
+      "reused_rankings_from": "experiments/dense/results/pplx-embed-v1-0.6b_fixed_1200_300_train/dense_rankings_top100.jsonl",
+      "artifacts": {
+        "rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/fixed_1200_300/dense_rankings_top100.jsonl",
+        "document_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_1200_300/embeddings.npy",
+        "query_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_train_queries_no_instruction/embeddings.npy",
+        "chunk_metadata": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_1200_300/chunk_metadata.jsonl"
+      }
+    },
+    {
+      "status": "complete",
+      "evaluation_split": "TRAIN only",
+      "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+      "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+      "query_instruction": null,
+      "chunk_config": {
+        "name": "paragraph_merge_600_0",
+        "strategy": "paragraph_merge",
+        "size": 600,
+        "overlap": 0
+      },
+      "document_count": 28482,
+      "chunk_count": 211869,
+      "top_k": 100,
+      "tie_break": "score descending, then document_id ascending",
+      "document_score": "maximum normalized query/chunk dot product",
+      "metrics": {
+        "query_count": 450,
+        "hits_at_1": 252,
+        "recall_at_1": 0.56,
+        "hits_at_5": 331,
+        "recall_at_5": 0.7355555555555555,
+        "hits_at_10": 355,
+        "recall_at_10": 0.7888888888888889,
+        "hits_at_20": 377,
+        "recall_at_20": 0.8377777777777777,
+        "hits_at_50": 403,
+        "recall_at_50": 0.8955555555555555,
+        "hits_at_100": 417,
+        "recall_at_100": 0.9266666666666666,
+        "mrr_at_10": 0.6323835978835979
+      },
+      "retrieval_seconds": 3.563707033987157,
+      "encoding": {
+        "reused": false,
+        "document_encoding_seconds": 12713.395492409996,
+        "document_encoding_wall_seconds": 12720.057343325985,
+        "chunks_per_second": 16.665020774858107,
+        "peak_gpu_memory_allocated_gib": 2.728144645690918,
+        "peak_gpu_memory_reserved_gib": 4.310546875
+      },
+      "reused_rankings_from": null,
+      "artifacts": {
+        "rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/paragraph_merge_600_0/dense_rankings_top100.jsonl",
+        "document_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_paragraph_merge_600_0/embeddings.npy",
+        "query_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_train_queries_no_instruction/embeddings.npy",
+        "chunk_metadata": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_paragraph_merge_600_0/chunk_metadata.jsonl"
+      }
+    },
+    {
+      "status": "complete",
+      "evaluation_split": "TRAIN only",
+      "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+      "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+      "query_instruction": null,
+      "chunk_config": {
+        "name": "paragraph_merge_1200_0",
+        "strategy": "paragraph_merge",
+        "size": 1200,
+        "overlap": 0
+      },
+      "document_count": 28482,
+      "chunk_count": 108231,
+      "top_k": 100,
+      "tie_break": "score descending, then document_id ascending",
+      "document_score": "maximum normalized query/chunk dot product",
+      "metrics": {
+        "query_count": 450,
+        "hits_at_1": 255,
+        "recall_at_1": 0.5666666666666667,
+        "hits_at_5": 328,
+        "recall_at_5": 0.7288888888888889,
+        "hits_at_10": 347,
+        "recall_at_10": 0.7711111111111111,
+        "hits_at_20": 369,
+        "recall_at_20": 0.82,
+        "hits_at_50": 401,
+        "recall_at_50": 0.8911111111111111,
+        "hits_at_100": 415,
+        "recall_at_100": 0.9222222222222223,
+        "mrr_at_10": 0.6346746031746032
+      },
+      "retrieval_seconds": 2.511707124998793,
+      "encoding": {
+        "reused": false,
+        "document_encoding_seconds": 12724.938603912218,
+        "document_encoding_wall_seconds": 12728.311297928012,
+        "chunks_per_second": 8.505424141435537,
+        "peak_gpu_memory_allocated_gib": 3.210969924926758,
+        "peak_gpu_memory_reserved_gib": 6.939453125
+      },
+      "reused_rankings_from": null,
+      "artifacts": {
+        "rankings": "experiments/dense/results/pplx_embed_v1_0.6b_six_chunk_train/paragraph_merge_1200_0/dense_rankings_top100.jsonl",
+        "document_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_paragraph_merge_1200_0/embeddings.npy",
+        "query_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_train_queries_no_instruction/embeddings.npy",
+        "chunk_metadata": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_paragraph_merge_1200_0/chunk_metadata.jsonl"
+      }
+    }
+  ]
+}

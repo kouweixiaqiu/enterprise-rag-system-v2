@@ -1,0 +1,13 @@
+{
+  "status": "complete_pending_review",
+  "question_count": 150,
+  "expected_decision": "INSUFFICIENT_CONTEXT",
+  "decision_counts": {
+    "ANSWER": 32,
+    "INSUFFICIENT_CONTEXT": 118,
+    "INVALID_FORMAT": 0
+  },
+  "automatic_refusal_rate": 0.7866666666666666,
+  "automatic_answer_rate": 0.21333333333333335,
+  "note": "This is an output-contract count. Final refusal quality still requires checking that answers do not contain unsupported operational guidance."
+}

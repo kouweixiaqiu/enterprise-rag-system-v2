@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "evaluation_split": "TRAIN only",
+  "model_name": "perplexity-ai/pplx-embed-v1-0.6b",
+  "model_revision": "2c4d510dd4a732063c31a0f70193e35067b51fd8",
+  "query_instruction": null,
+  "chunk_config": "fixed_1200_300",
+  "chunk_parameters": {
+    "size": 1200,
+    "overlap": 300,
+    "step": 900
+  },
+  "document_count": 28482,
+  "chunk_count": 117259,
+  "top_k": 100,
+  "tie_break": "score descending, then document_id ascending",
+  "document_score": "maximum normalized query/chunk dot product",
+  "metrics": {
+    "query_count": 450,
+    "hits_at_1": 252,
+    "recall_at_1": 0.56,
+    "hits_at_5": 330,
+    "recall_at_5": 0.7333333333333333,
+    "hits_at_10": 350,
+    "recall_at_10": 0.7777777777777778,
+    "hits_at_20": 375,
+    "recall_at_20": 0.8333333333333334,
+    "hits_at_50": 399,
+    "recall_at_50": 0.8866666666666667,
+    "mrr_at_10": 0.6304559082892417
+  },
+  "retrieval_seconds": 2.7148755009984598,
+  "encoding": {
+    "reused": false,
+    "document_encoding_seconds": 13900.819548213025,
+    "document_encoding_wall_seconds": 13950.519437273004,
+    "chunks_per_second": 8.435401926721209,
+    "peak_gpu_memory_allocated_gib": 3.2035417556762695,
+    "peak_gpu_memory_reserved_gib": 7.166015625
+  },
+  "artifacts": {
+    "rankings": "experiments/dense/results/pplx-embed-v1-0.6b_fixed_1200_300_train/dense_rankings_top100.jsonl",
+    "document_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_1200_300/embeddings.npy",
+    "query_vectors": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_train_queries_no_instruction/embeddings.npy",
+    "chunk_metadata": "data/processed/techqa/dense_cache/pplx-embed-v1-0.6b_fixed_1200_300/chunk_metadata.jsonl"
+  }
+}

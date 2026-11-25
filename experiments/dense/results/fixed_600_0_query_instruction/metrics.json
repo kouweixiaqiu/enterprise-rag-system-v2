@@ -1,0 +1,42 @@
+{
+  "artifacts": {
+    "comparison": "experiments/dense/results/fixed_600_0_query_instruction/comparison_with_no_instruction.json",
+    "rankings": "experiments/dense/results/fixed_600_0_query_instruction/query_rankings_top100.jsonl"
+  },
+  "chunk_config": "fixed_600_0",
+  "cuda_device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "device": "cuda",
+  "document_aggregation": "maximum chunk score per document before Top-100",
+  "document_cache_manifest": "data/processed/techqa/dense_cache/bge-small-en-v1.5_fixed_600_0/manifest.json",
+  "document_cache_reused": true,
+  "document_instruction": null,
+  "document_tie_break": "document_id ascending",
+  "environment": {
+    "numpy": "2.5.5",
+    "python": "3.12.3",
+    "torch": "2.15.0+cu132"
+  },
+  "evaluation_split": "TRAIN only",
+  "model_name": "BAAI/bge-small-en-v1.5",
+  "model_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+  "query_construction": "instruction prefix concatenated directly before original query text",
+  "query_count": 450,
+  "query_encoding_seconds": 2.2282673160007107,
+  "query_instruction": "Represent this sentence for searching relevant passages: ",
+  "query_instruction_repr": "'Represent this sentence for searching relevant passages: '",
+  "query_truncated_count": 1,
+  "retrieval": {
+    "average_search_seconds": 0.004630481260084909,
+    "exact_reference_ranks": {
+      "TRAIN_Q003": 4,
+      "TRAIN_Q024": 91
+    },
+    "exact_search_seconds": 2.083716567038209,
+    "mrr_at_10": 0.5403201058201058,
+    "queries_with_100_documents": 450,
+    "query_count": 450,
+    "recall_at_1": 0.4688888888888889,
+    "recall_at_5": 0.6311111111111111
+  },
+  "similarity": "normalized exact dot product"
+}

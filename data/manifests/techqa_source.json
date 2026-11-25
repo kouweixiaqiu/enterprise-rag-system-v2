@@ -1,0 +1,30 @@
+{
+  "dataset": "TechQA",
+  "publisher": "IBM",
+  "official_repository": "https://github.com/IBM/techqa",
+  "paper": "https://aclanthology.org/2020.acl-main.117/",
+  "download_page": "https://huggingface.co/datasets/PrimeQA/TechQA/tree/main",
+  "artifact": {
+    "filename": "TechQA.tar.gz",
+    "source_url": "https://huggingface.co/datasets/PrimeQA/TechQA/resolve/main/TechQA.tar.gz",
+    "repository_commit": "60437bc79ab217679682217598a3693cab78365b",
+    "size_bytes": 2959973525,
+    "sha256": "6b094ef9a69718f727ce8d7e15c4d961e51032cefaa952e0d6af9d176d7ba118"
+  },
+  "extracted_root": "data/raw/techqa/TechQA",
+  "primary_files": [
+    "training_and_dev/training_Q_A.json",
+    "training_and_dev/dev_Q_A.json",
+    "training_and_dev/training_dev_technotes.json",
+    "training_and_dev/training_dev_technotes.sections.json",
+    "technote_corpus/full_technote_collection.sections.json",
+    "technote_corpus/full_technote_collection.txt.bz2",
+    "technote_corpus/technotes.id_title_text",
+    "technote_corpus/technotes.text"
+  ],
+  "notes": [
+    "The IBM repository links to this hosted release for the train/dev data and Technotes.",
+    "The downloaded artifact matched the recorded size and SHA-256 before extraction.",
+    "Raw data is excluded from version control; this manifest is intended to be tracked."
+  ]
+}

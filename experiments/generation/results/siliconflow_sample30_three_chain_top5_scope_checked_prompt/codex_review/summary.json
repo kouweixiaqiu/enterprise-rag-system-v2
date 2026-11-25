@@ -1,0 +1,127 @@
+{
+  "reviewer": "Codex",
+  "input_alignment": {
+    "matched_old_new_question_chain_pairs": 90,
+    "expected": 90,
+    "same_top5_document_chunk_order": true,
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "temperature": 0,
+    "max_tokens": 512
+  },
+  "groups": {
+    "A": {
+      "old_complete_pass": 12,
+      "new_complete_pass": 10,
+      "new_pass": 1,
+      "new_pass_question_ids": [
+        "TRAIN_Q482"
+      ],
+      "regressed": 3,
+      "regressed_question_ids": [
+        "TRAIN_Q018",
+        "TRAIN_Q144",
+        "TRAIN_Q402"
+      ],
+      "net": -2
+    },
+    "B": {
+      "old_complete_pass": 14,
+      "new_complete_pass": 13,
+      "new_pass": 4,
+      "new_pass_question_ids": [
+        "TRAIN_Q064",
+        "TRAIN_Q127",
+        "TRAIN_Q140",
+        "TRAIN_Q154"
+      ],
+      "regressed": 5,
+      "regressed_question_ids": [
+        "TRAIN_Q018",
+        "TRAIN_Q054",
+        "TRAIN_Q144",
+        "TRAIN_Q386",
+        "TRAIN_Q402"
+      ],
+      "net": -1
+    },
+    "C": {
+      "old_complete_pass": 13,
+      "new_complete_pass": 13,
+      "new_pass": 3,
+      "new_pass_question_ids": [
+        "TRAIN_Q089",
+        "TRAIN_Q294",
+        "TRAIN_Q402"
+      ],
+      "regressed": 3,
+      "regressed_question_ids": [
+        "TRAIN_Q144",
+        "TRAIN_Q188",
+        "TRAIN_Q494"
+      ],
+      "net": 0
+    }
+  },
+  "complete_evidence_old_failures": {
+    "A": {
+      "eligible": 6,
+      "rescued": 0,
+      "question_ids": []
+    },
+    "B": {
+      "eligible": 9,
+      "rescued": 4,
+      "question_ids": [
+        "TRAIN_Q064",
+        "TRAIN_Q127",
+        "TRAIN_Q140",
+        "TRAIN_Q154"
+      ]
+    },
+    "C": {
+      "eligible": 7,
+      "rescued": 3,
+      "question_ids": [
+        "TRAIN_Q089",
+        "TRAIN_Q294",
+        "TRAIN_Q402"
+      ]
+    },
+    "total": {
+      "eligible": 22,
+      "rescued": 7
+    }
+  },
+  "quality_regressions": {
+    "new_unsupported_conclusion_count": 4,
+    "new_unsupported_conclusion_pairs": [
+      [
+        "TRAIN_Q054",
+        "B"
+      ],
+      [
+        "TRAIN_Q402",
+        "A"
+      ],
+      [
+        "TRAIN_Q402",
+        "B"
+      ],
+      [
+        "TRAIN_Q482",
+        "C"
+      ]
+    ],
+    "false_insufficient_context_with_complete_evidence_count": 2,
+    "false_insufficient_context_pairs": [
+      [
+        "TRAIN_Q188",
+        "C"
+      ],
+      [
+        "TRAIN_Q494",
+        "C"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+chain,questions,reference_top5_hits,complete,partial,no_evidence
+fixed_1200_0_rrf,30,25,16,8,6
+fixed_1200_300_rrf,30,25,18,3,9
+fixed_600_0_rrf,30,25,10,15,5
+fixed_600_150_rrf,30,25,13,11,6
+paragraph_merge_1200_0_rrf,30,25,19,6,5
+paragraph_merge_600_0_rrf,30,25,11,13,6
+fixed_600_0_pplx,30,27,11,14,5

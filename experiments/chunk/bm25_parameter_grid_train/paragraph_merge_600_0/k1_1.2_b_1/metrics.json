@@ -1,0 +1,40 @@
+{
+  "artifacts": {
+    "index": "data/processed/techqa/bm25_parameter_grid_indexes/paragraph_merge_600_0.sqlite",
+    "rankings": "experiments/chunk/bm25_parameter_grid_train/paragraph_merge_600_0/k1_1.2_b_1/rankings_top100.jsonl"
+  },
+  "b": 1.0,
+  "baseline": false,
+  "chunk_config": {
+    "name": "paragraph_merge_600_0",
+    "overlap": 0,
+    "size": 600,
+    "strategy": "paragraph_merge"
+  },
+  "evaluation_split": "TRAIN only",
+  "k1": 1.2,
+  "metrics": {
+    "hits_at_1": 195,
+    "hits_at_10": 298,
+    "hits_at_100": 387,
+    "hits_at_20": 324,
+    "hits_at_5": 265,
+    "hits_at_50": 358,
+    "mrr_at_10": 0.502216049382716,
+    "query_count": 450,
+    "recall_at_1": 0.43333333333333335,
+    "recall_at_10": 0.6622222222222223,
+    "recall_at_100": 0.86,
+    "recall_at_20": 0.72,
+    "recall_at_5": 0.5888888888888889,
+    "recall_at_50": 0.7955555555555556
+  },
+  "ranking": {
+    "depth": 100,
+    "document_aggregation": "maximum BM25 chunk score per document",
+    "representative_chunk": "highest-scoring chunk; lower chunk index on tie",
+    "tie_break": "document_id ascending",
+    "tokenization": "Unicode alphanumeric runs matched by Python regex [^\\W_]+, casefolded; underscores and all other punctuation are separators; no stemming; no stopword filtering; duplicate query terms removed before OR matching"
+  },
+  "shared_config_query_seconds": 1324.0628327020095
+}
